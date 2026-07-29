@@ -5,15 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Works — Georgina Kinuthia</title>
 <style>
-  /* ---------- CORE SYSTEM DESIGN ---------- */
+  /* ---------- DESIGN VARIABLES ---------- */
   :root {
-    --ink: #111111;                 /* Primary font ink */
-    --paper: #ffffff;               /* Background workspace */
-    --sage: #666666;                /* Subdued secondary tone */
-    --line: #eaeaea;                /* Boundary panel strokes */
+    --ink: #111111;                 /* Primary text color */
+    --paper: #ffffff;               /* Canvas light background */
+    --sage: #666666;                /* Muted text for sub-menus */
+    --coral: #e8543a;               /* Highlight / warning index orange */
+    --line: #eaeaea;                /* Boundary panel stroke */
     --system-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --system-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   }
 
+  /* ---------- CORE RESET & BASE STYLES ---------- */
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
 
@@ -23,11 +26,12 @@
     font-family: var(--system-sans); font-size: 15px; line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
+  
   a { color: var(--ink); text-decoration: none; }
   h1 { font-size: 24px; font-weight: 700; margin: 0 0 16px; letter-spacing: -0.02em; }
-  h2 { font-size: 15px; font-weight: 700; text-transform: uppercase; margin: 40px 0 15px; letter-spacing: 0.05em; color: var(--ink); }
+  h2 { font-size: 15px; font-weight: 700; text-transform: uppercase; margin: 45px 0 15px; letter-spacing: 0.05em; color: var(--ink); border-bottom: 1px solid var(--line); padding-bottom: 6px; }
 
-  /* ---------- RESPONSIVE CONTAINER LAYOUT ---------- */
+  /* ---------- RESPONSIVE GRID PANELS ---------- */
   .layout-container { display: flex; flex-direction: column; min-height: 100vh; }
   .left-panel { background: var(--paper); padding: 50px 30px 20px; border-bottom: 1px solid var(--line); }
   .right-panel { flex: 1; padding: 40px 30px; }
@@ -38,14 +42,14 @@
     .right-panel { margin-left: 25%; padding: 72px 60px 70px 80px; max-width: 740px; }
   }
 
-  /* ---------- NAVIGATION & PROFILE LINKS ---------- */
+  /* ---------- SIDEBAR NAVIGATION MENU ---------- */
   .profile-link { font-size: 24px; font-weight: 700; display: block; margin-bottom: 24px; letter-spacing: -0.02em; }
   .main-nav { list-style: none; padding: 0; margin: 0; }
   .main-nav li { margin-bottom: 10px; }
   .main-nav a { font-size: 14px; color: var(--sage); }
   .main-nav a:hover { color: var(--ink); text-decoration: underline; }
 
-  /* Nested Project Filtering Index Menu */
+  /* Sub-Categorized Jump Index Filter */
   .category-menu { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); margin-top: 30px; padding-top: 20px; }
   .category-title { font-size: 13px; font-weight: 700; text-transform: uppercase; color: var(--ink); margin: 15px 0 6px; letter-spacing: 0.05em; }
   .subcategory-links { list-style: none; padding-left: 12px; margin: 0 0 10px; }
@@ -53,30 +57,27 @@
   .subcategory-links a { font-size: 13.5px; color: var(--sage); }
   .subcategory-links a:hover { color: var(--ink); text-decoration: underline; }
 
-  /* Tray Contact Layout Links */
+  /* Horizontal Contact Links Tray */
   .social-anchor-tray { display: flex; gap: 14px; flex-wrap: wrap; margin: 0 0 30px; font-size: 14px; }
   .social-anchor-tray a { color: var(--sage); border-bottom: 1px solid transparent; }
   .social-anchor-tray a:hover { color: var(--ink); border-bottom-color: var(--ink); }
 
-  /* ---------- PROJECT CARD SCHEMATICS ---------- */
-  .project-item { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #f5f5f5; }
-  .project-item:last-child { border-bottom: none; }
-  .project-meta { font-size: 12px; color: #888888; text-transform: uppercase; margin-bottom: 4px; font-family: monospace; }
-  .project-item h3 { font-size: 16px; font-weight: 600; margin: 0 0 6px; }
-  .project-item p { font-size: 14.5px; color: #444444; margin: 0; }
+  /* ---------- PROJECT ELEMENT TIMELINES ---------- */
+  .project-item { margin-bottom: 35px; padding-bottom: 10px; }
+  .project-meta { font-family: var(--system-mono); font-size: 12px; color: var(--coral); margin-bottom: 4px; text-transform: uppercase; }
+  .project-item h3 { font-size: 16px; font-weight: 600; margin: 0 0 6px; color: var(--ink); }
+  .project-item p { font-size: 14.5px; color: #333333; margin: 0; text-align: justify; }
 
   .cv-action-box { margin-bottom: 35px; }
   .download-btn { display: inline-block; font-size: 14px; text-decoration: underline; font-weight: 600; color: var(--ink); }
   .download-btn:hover { color: #444444; }
-
-  footer { border-top: 1px solid var(--line); padding-top: 20px; font-size: 13px; color: var(--sage); margin-top: 60px; }
 </style>
 </head>
 <body>
 
 <div class="layout-container">
 
-  <!-- LEFT FIXED PANEL: SYNCHRONIZED SIDEBAR NAVIGATION -->
+  <!-- LEFT FIXED PANEL: CATEGORIZED SIDEBAR NAVIGATION -->
   <aside class="left-panel">
     <a href="/index.html" class="profile-link">Georgina Kinuthia</a>
     
@@ -87,34 +88,44 @@
       <li><a href="/cv.html">— CV</a></li>
     </ul>
 
-    <!-- Sub-Categorized Filters Component -->
+    <!-- Categorized Bookmarks Filter Menu -->
     <ul class="category-menu">
       <li>
-        <div class="category-title">Spatial Vulnerability</div>
+        <div class="category-title">Urban Informatics</div>
         <ul class="subcategory-links">
-          <li><a href="#vera-index">NFI - V.E.R.A. Index</a></li>
+          <li><a href="#vera-index">V.E.R.A. Index Matrix</a></li>
         </ul>
       </li>
       <li>
-        <div class="category-title">Circular Economy</div>
+        <div class="category-title">Circular Infrastructure</div>
         <ul class="subcategory-links">
           <li><a href="#insect-farm">Civic Insect Farm</a></li>
         </ul>
       </li>
       <li>
-        <div class="category-title">Civic Architecture</div>
+        <div class="category-title">Civic Co-Design</div>
         <ul class="subcategory-links">
           <li><a href="#fdb-center">FDB Civic Center</a></li>
           <li><a href="#peace-hub">Iftiin Peace Hub</a></li>
+          <li><a href="#healing-farm">Feminist Healing Farm</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="category-title">Educational &amp; Safe Spaces</div>
+        <ul class="subcategory-links">
+          <li><a href="#gbv-homes">GBV Safe Homes</a></li>
+          <li><a href="#shofco-school">SHOFCO Girls' School</a></li>
+          <li><a href="#summits-education">Summits Prototype</a></li>
+          <li><a href="#mailitisa-school">Maili Tisa CBC School</a></li>
         </ul>
       </li>
     </ul>
   </aside>
 
-  <!-- RIGHT PANEL: CONTENT TIMELINES -->
+  <!-- RIGHT PANEL: PORTFOLIO MAIN BODY MATRICES -->
   <main class="right-panel">
     
-    <!-- Top Active Platform Triggers -->
+    <!-- Verified Target Platform Redirection Tray -->
     <nav class="social-anchor-tray">
       <a href="https://linkedin.com" target="_blank">LinkedIn</a>
       <a href="https://github.com" target="_blank">GitHub</a>
@@ -122,15 +133,16 @@
     </nav>
 
     <h1>Works</h1>
-    <p>A structured index of projects specializing in geospatial vulnerability tracking, field co-design, and community infrastructure design frameworks.</p>
+    <p>A comprehensive timeline tracking core spatial vulnerability diagnostics, community participatory co-design models, and circular care infrastructure pipelines deployed across resource-constrained geographies.</p>
 
     <!-- Download Asset Block -->
     <div class="cv-action-box">
-      <a href="/Georgina_Kinuthia_CV.pdf" download="Georgina_Kinuthia_CV.pdf" class="download-btn">Download Complete Resume PDF ↓</a>
+      <a href="/Georgina_Kinuthia_CV.pdf" download="Georgina_Kinuthia_CV.pdf" class="download-btn">Download Comprehensive Resume PDF ↓</a>
     </div>
 
     <!-- Category Group 1 -->
-    <h2>Spatial Vulnerability</h2>
+    <h2>Urban Informatics &amp; Equity Mapping</h2>
+    
     <div class="project-item" id="vera-index">
       <div class="project-meta">Ciudad de México / 2026</div>
       <h3>Miguel Hidalgo Spatial Vulnerability Framework (V.E.R.A. Index)</h3>
@@ -138,33 +150,37 @@
     </div>
 
     <!-- Category Group 2 -->
-    <h2>Circular Economy</h2>
+    <h2>Circular Care Infrastructure</h2>
+    
     <div class="project-item" id="insect-farm">
       <div class="project-meta">Nairobi &amp; Kisumu, Kenya / 2025</div>
-      <h3>Civic Insect Farm</h3>
-      <p>Circular bioeconomy facility prototype converting urban organic waste into protein feed and compost — FAO Green Cities Initiative, with the Italian Agency for Development Cooperation.</p>
+      <h3>The Civic Insect Farm Facilities Blueprint</h3>
+      <p>Developed as a core component of the FAO Green Cities Initiative in partnership with AICS. This bioconversion prototype optimizes a 50x100 ft plot footprint to convert 5 tons of daily organic waste into high-protein animal feed and nutrient-rich compost using low-carbon compressed earth blocks (CEB) and solar arrays. Designed around micro-franchise scaling strategies to anchor local youth cooperatives.</p>
+    </div>
+
+    <div class="project-item" id="healing-farm">
+      <div class="project-meta">Kitui, Kenya / 2021</div>
+      <h3>Feminist Republik Healing Farm</h3>
+      <p>A women-led sanctuary masterplan designed with soft curves and clustered layouts following natural contours to support African Women Human Rights Defenders (AWHRDs). Deployed an array of passive solar chimney ventilation steps, high thermal-mass adobe barriers, rainwater storage networks, and universally accessible paraplegic modules built out of stone, bamboo, and compressed stabilized earth blocks (CSEB).</p>
     </div>
 
     <!-- Category Group 3 -->
-    <h2>Civic Architecture</h2>
+    <h2>Community Participatory Co-Design</h2>
+    
     <div class="project-item" id="fdb-center">
       <div class="project-meta">Fond des Blancs, Haiti / 2024</div>
-      <h3>FDB Civic Center</h3>
-      <p>Community-planned civic building co-designed through a Community Planning Advisory Committee; adaptable spaces for governance, education, and gathering — Adaptiv.</p>
+      <h3>FDB Civic &amp; Cultural Center Core</h3>
+      <p>Conceived as a multi-scalar civic backbone co-authored directly alongside a Community Planning Advisory Committee (CPAC) to withstand local institutional turbulence. The masterplan integrates local masonry strategies with open internal microclimate courtyards, stepped roofing for air ventilation relief, and self-sufficient rainwater harvesting loops to serve as a community sanctuary.</p>
     </div>
     
     <div class="project-item" id="peace-hub">
       <div class="project-meta">Abudwak, Somalia / 2024</div>
       <h3>Iftiin Foundation Peace Hub</h3>
-      <p>Vocational training, psychosocial services, and enterprise incubation hub using passive cooling and locally quarried limestone — Adaptiv, with USAID.</p>
+      <p>A modular humanitarian civic node built in partnership with the Iftiin Foundation and USAID to stabilize communities experiencing severe resource displacement. Uses a circular plan wrapped around an absolute shade courtyard, utilizing thick local limestone walls for thermal cooling mass, passive wind ventilation openings, and rainwater reservoirs to lower reliance on fragile municipal grids.</p>
     </div>
 
-    <footer>
-      <p>© Copyright 2026 Georgina Kinuthia. All text licensed CC-BY-NC 4.0.</p>
-    </footer>
-  </main>
+    <!-- Category Group 4 -->
+    <h2>Educational Infrastructure &amp; Safe Spaces</h2>
 
-</div>
-
-</body>
-</html>
+    <div class="project-item" id="gbv-homes">
+      <div class="project-meta">All 47 Counties, Kenya / 2024</div>
