@@ -7,7 +7,7 @@
 <style>
   /* ---------- BRAND FRESH AESTHETICS FRAMEWORK ---------- */
   :root {
-    --ink: #1a2421;                 /* Deep charcoal green for ultra-readable text */
+    --ink: #1a2421;                 /* Deep charcoal green for text readability */
     --paper: #fcfbfa;               /* Warm off-white canvas skin background */
     --card: #f4f2ee;                /* Soft stone module container backgrounds */
     --accent: #d35400;              /* Terracotta Clay highlight accent color */
@@ -77,9 +77,10 @@
   }
 
   /* ---------- TYPOGRAPHY & INTERFACE SYSTEMS ---------- */
-  h1 { font-family: var(--system-serif); font-size: 28px; font-weight: 700; margin: 0 0 32px; color: var(--moss); letter-spacing: -0.01em; }
-  h1 a { color: var(--moss) !important; }
+  .profile-link { font-family: var(--system-serif); font-size: 28px; font-weight: 700; margin: 0 0 32px; color: var(--moss); letter-spacing: -0.01em; display: block; }
+  .profile-link:hover { color: var(--accent); }
   
+  h1 { font-family: var(--system-serif); font-size: 32px; font-weight: 700; margin: 0 0 24px; color: var(--moss); }
   h2 { font-family: var(--system-serif); font-size: 18px; font-weight: 700; margin: 0 0 24px; color: var(--moss); text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 2px solid var(--accent); padding-bottom: 6px; display: inline-block; }
 
   /* Fully Synchronized Cross-Page Sidebar Navigation Menu Links */
@@ -106,7 +107,7 @@
 
   <!-- LEFT PANEL: FIXED SIDEBAR CONTAINER -->
   <aside class="left-panel">
-    <h1><a href="/index.html">Georgina Kinuthia</a></h1>
+    <a href="/index.html" class="profile-link">Georgina Kinuthia</a>
     <ul class="nav-menu">
       <li><a href="/about.html">— About</a></li>
       <li><a href="/works.html">— Works</a></li>
@@ -118,7 +119,7 @@
   <!-- RIGHT PANEL: SCROLLABLE CONTENT BODY -->
   <main class="right-panel">
     
-    <!-- Profile Social Interface Links Tray -->
+    <!-- ACTIVE VERIFIED PLATFORM CONTACT INTERFACE TRIPS -->
     <nav class="social-anchor-tray">
       <a href="https://linkedin.com" target="_blank">LinkedIn</a>
       <a href="https://github.com" target="_blank">GitHub</a>
@@ -134,11 +135,7 @@
         <img src="/portraitprofile.jpg" alt="Georgina Kinuthia" class="portrait-img">
       </div>
 
-      <p>I am Georgina Kinuthia, a sustainable urban designer and architect using spatial data and participatory design to close infrastructure equity gaps in resource-constrained cities. Trained as an architect at the University of Nairobi, I have since practiced across Kenya, Haiti, and Somalia — delivering civic, educational, and humanitarian infrastructure for partners including the FAO, USAID, and SHOFCO.</p>
-      
-      <p>In my current role as a Scholar at the Norman Foster Institute in Madrid, my focus lies in the development of GIS-based spatial vulnerability frameworks to identify risk distribution channels across Mexico City's Miguel Hidalgo borough. By parsing empirical data alongside neighborhood governance networks, I structure multi-scalar action indices that direct public funding into targeted resilient interventions.</p>
-
-      <p>In parallel, I partner with architectural studios and development groups to integrate low-carbon, locally source-derived building systems into planning matrices. I maintain close field ties with structural planning advisory committees to ensure complex spatial information remains community-accessible and baseline maintainable over extended lifecycles.</p>
+      <p>I am an Urban Systems Architect and researcher using spatial data, participatory planning, and climate-responsive design to tackle infrastructure inequalities in growing cities [INDEX: 0.1.3]. My work connects hard data—like GIS mapping and Python modeling—with the real-world needs of local communities [INDEX: 0.1.33]. From designing schools in rural Haiti to analyzing transit accessibility in Mexico City, I build evidence-based frameworks that help city planners, architecture studios, and NGOs direct funding where it matters most [INDEX: 0.1.20, 0.1.36].</p>
     </section>
 
     <!-- Unified Footprint Footer -->
