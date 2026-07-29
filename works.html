@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Works — Georgina Kinuthia</title>
+<style>
+  body {
+    margin: 0; padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6; color: #111111; background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: #111111; text-decoration: none; }
+  h1 { font-size: 24px; font-weight: 700; margin: 0 0 16px; letter-spacing: -0.02em; }
+  h2 { font-size: 15px; font-weight: 700; text-transform: uppercase; margin: 30px 0 12px; letter-spacing: 0.05em; color: #111111; }
+  p { margin: 0 0 1.5em; font-size: 15px; color: #333333; }
+
+  /* MASTER STRUCTURAL GRID */
+  .layout-container { display: flex; flex-direction: column; min-height: 100vh; }
+  .left-panel { background: #ffffff; padding: 40px 30px; border-bottom: 1px solid #eaeaea; }
+  .right-panel { flex: 1; padding: 40px 30px; }
+
+  @media (min-width: 768px) {
+    .layout-container { flex-direction: row; }
+    .left-panel { width: 25%; min-width: 240px; position: fixed; top: 0; bottom: 0; left: 0; border-right: 1px solid #eaeaea; padding: 60px 40px; }
+    .right-panel { margin-left: 25%; padding: 60px 60px 60px 80px; max-width: 720px; }
+  }
+
+  /* SIDEBAR PROFILE & BASE NAVIGATION */
+  .profile-link { font-size: 24px; font-weight: 700; display: block; margin-bottom: 24px; letter-spacing: -0.02em; }
+  .main-nav { list-style: none; padding: 0; margin: 0 0 40px; }
+  .main-nav li { margin-bottom: 10px; }
+  .main-nav a { font-size: 14px; color: #666666; }
+  .main-nav a:hover { color: #111111; text-decoration: underline; }
+
+  /* SUB-CATEGORIZED NESTED MENU */
+  .category-menu { list-style: none; padding: 0; margin: 0; border-top: 1px solid #eaeaea; padding-top: 20px; }
+  .category-title { font-size: 13px; font-weight: 700; text-transform: uppercase; color: #111111; margin: 15px 0 6px; letter-spacing: 0.05em; }
+  .subcategory-links { list-style: none; padding-left: 12px; margin: 0 0 10px; }
+  .subcategory-links li { margin-bottom: 6px; }
+  .subcategory-links a { font-size: 13.5px; color: #666666; }
+  .subcategory-links a:hover { color: #111111; text-decoration: underline; }
+
+  /* PROJECT BLOCK ITEMS */
+  .project-item { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #f5f5f5; }
+  .project-item:last-child { border-bottom: none; }
+  .project-meta { font-size: 12px; color: #888888; text-transform: uppercase; margin-bottom: 4px; font-family: monospace; }
+  .project-item h3 { font-size: 16px; font-weight: 600; margin: 0 0 6px; }
+  .project-item p { font-size: 14px; color: #555555; margin: 0; }
+
+  .footer-stamp { border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 13px; color: #666666; margin-top: 50px; }
+</style>
+</head>
+<body>
+
+<div class="layout-container">
+
+  <!-- LEFT FIXED PANEL: CATEGORIZED SIDEBAR -->
+  <aside class="left-panel">
+    <a href="index.html" class="profile-link">Georgina Kinuthia</a>
+    
+    <ul class="main-nav">
+      <li><a href="about.html">— About</a></li>
+      <li><a href="works.html" style="color: #111111; font-weight: bold;">— Works</a></li>
+    </ul>
+
+    <!-- Nested Category Filter Navigation -->
+    <ul class="category-menu">
+      <li>
+        <div class="category-title">Spatial Vulnerability</div>
+        <ul class="subcategory-links">
+          <li><a href="#vera-index">NFI - V.E.R.A. Index</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="category-title">Circular Economy</div>
+        <ul class="subcategory-links">
+          <li><a href="#insect-farm">Civic Insect Farm</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="category-title">Civic Architecture</div>
+        <ul class="subcategory-links">
+          <li><a href="#fdb-center">FDB Civic Center</a></li>
+          <li><a href="#peace-hub">Iftiin Peace Hub</a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- RIGHT SCROLLABLE PANEL: SECTIONS -->
+  <main class="right-panel">
+    <h1>Works</h1>
+    <p>A structured selection of projects focused on spatial data diagnostics, community-led co-design, and resilient urban infrastructure pipelines.</p>
+
+    <!-- Category 1 -->
+    <h2 id="spatial-vulnerability">Spatial Vulnerability</h2>
+    <div class="project-item" id="vera-index">
+      <div class="project-meta">Ciudad de México / 2026</div>
+      <h3>Miguel Hidalgo Spatial Vulnerability Framework (V.E.R.A. Index)</h3>
+      <p>GIS-based diagnostic framework mapping systemic exposure across a Mexico City borough, with an accompanying public-realm design toolkit — Norman Foster Institute.</p>
+    </div>
+
+    <!-- Category 2 -->
+    <h2 id="circular-economy">Circular Economy</h2>
+    <div class="project-item" id="insect-farm">
+      <div class="project-meta">Nairobi &amp; Kisumu, Kenya / 2025</div>
+      <h3>Civic Insect Farm</h3>
+      <p>Circular facility prototype converting urban organic waste into protein feed and compost — FAO Green Cities Initiative.</p>
+    </div>
+
+    <!-- Category 3 -->
+    <h2 id="civic-architecture">Civic Architecture</h2>
+    <div class="project-item" id="fdb-center">
+      <div class="project-meta">Fond des Blancs, Haiti / 2024</div>
+      <h3>FDB Civic Center</h3>
+      <p>Community-planned civic infrastructure co-designed through a local Planning Advisory Committee — Adaptiv.</p>
+    </div>
+    
+    <div class="project-item" id="peace-hub">
+      <div class="project-meta">Abudwak, Somalia / 2024</div>
+      <h3>Iftiin Foundation Peace Hub</h3>
+      <p>Vocational training and enterprise incubation hub utilizing passive cooling parameters and locally quarried limestone — Adaptiv / USAID.</p>
+    </div>
+
+    <footer class="footer-stamp">
+      <p>© Copyright 2026 Georgina Kinuthia. All text licensed CC-BY-NC 4.0.</p>
+    </footer>
+  </main>
+
+</div>
+
+</body>
+</html>
