@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Georgina Kinuthia — Sustainable Urban Designer &amp; Architect</title>
-
 <style>
   :root {
     --ink: #111111;
@@ -28,7 +27,7 @@
   }
 
   a { color: var(--ink); text-decoration: none; }
-  p { margin: 0 0 1.5em; color: #222; }
+  p { margin: 0 0 1.5em; color: #222222; }
 
   /* ---------- MASTER GRID SPLIT LAYOUT ---------- */
   .layout-container {
@@ -37,27 +36,27 @@
     min-height: 100vh;
   }
 
-  /* Left Fixed Column Panel */
+  /* Left Fixed Sidebar Panel */
   .left-panel {
     background: var(--paper);
-    padding: 50px 30px 30px;
+    padding: 50px 30px 20px;
     border-bottom: 1px solid var(--line);
   }
 
-  /* Right Scrollable Column Panel */
+  /* Right Scrollable Main Content Panel */
   .right-panel {
     flex: 1;
     padding: 40px 30px;
   }
 
-  /* Desktop View Grid Lock */
+  /* Desktop Configuration View Transition */
   @media (min-width: 768px) {
     .layout-container {
       flex-direction: row;
     }
     .left-panel {
-      width: 28%;
-      min-width: 250px;
+      width: 25%;
+      min-width: 240px;
       position: fixed;
       top: 0; bottom: 0; left: 0;
       border-bottom: none;
@@ -65,59 +64,60 @@
       padding: 70px 40px;
     }
     .right-panel {
-      margin-left: 28%; /* Keeps right content perfectly aligned to panel edge */
-      padding: 72px 60px 70px 80px;
+      margin-left: 25%;
+      padding: 70px 60px 70px 80px;
       max-width: 740px;
     }
   }
 
-  /* ---------- TYPOGRAPHY & INTERFACE ELEMENTS ---------- */
+  /* ---------- INTERFACE DESIGN & TYPOGRAPHY ---------- */
   h1 { font-size: 24px; font-weight: 700; margin: 0 0 24px; color: var(--ink); letter-spacing: -0.02em; }
   h2 { font-size: 16px; font-weight: 700; margin: 0 0 20px; color: var(--ink); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
   h3 { font-size: 15px; font-weight: 600; margin: 0 0 6px; color: var(--ink); }
 
+  /* Fully Synchronized Cross-Page Sidebar Navigation Menu */
   .nav-menu { list-style: none; padding: 0; margin: 0 0 40px; }
   .nav-menu li { margin-bottom: 10px; }
   .nav-menu a { font-size: 14px; color: var(--sage); font-weight: 400; }
   .nav-menu a:hover { color: var(--ink); text-decoration: underline; }
 
-  /* Social Anchor Row */
-  .social-links { display: flex; gap: 14px; flex-wrap: wrap; margin: 0 0 30px; font-family: var(--sans); font-size: 14px; }
-  .social-links a { color: #666; border-bottom: 1px solid transparent; }
+  /* Social Anchor Button Tray Layout */
+  .social-links { display: flex; gap: 14px; flex-wrap: wrap; margin: 0 0 30px; font-size: 14px; }
+  .social-links a { color: #666666; border-bottom: 1px solid transparent; }
   .social-links a:hover { color: var(--ink); border-bottom-color: var(--ink); }
 
   section { margin-bottom: 55px; }
 
-  /* Profile Photo Frame */
+  /* Portrait Crop Block Frame */
   .profile-photo-container { margin: 0 0 30px; text-align: left; }
-  .profile-photo { width: 140px; height: 140px; border-radius: 4px; object-fit: cover; display: block; filter: grayscale(100%); }
+  .profile-photo { width: 130px; height: 130px; border-radius: 4px; object-fit: cover; display: block; filter: grayscale(100%); }
 
-  /* Focus Text Categories */
+  /* Core Competency Stack List */
   .focus-stack { margin-top: 25px; }
   .focus-item { padding: 14px 0; border-bottom: 1px solid #f5f5f5; }
   .focus-item:first-child { border-top: 1px solid #f5f5f5; }
-  .focus-item p { font-size: 14px; color: #555; margin: 0; }
+  .focus-item p { font-size: 14px; color: #555555; margin: 0; }
 
-  /* Portfolio Timelines */
+  /* Portfolio Item Timelines */
   .project-node { margin-bottom: 28px; }
   .project-node .meta { font-family: var(--mono); font-size: 12px; color: var(--coral); margin-bottom: 4px; }
-  .project-node p { font-size: 14.5px; color: #444; margin: 4px 0 0; }
+  .project-node p { font-size: 14.5px; color: #444444; margin: 4px 0 0; }
 
-  /* Services Modules */
+  /* Services Modules Layout */
   .service-box { margin-bottom: 24px; }
-  .service-box p { font-size: 14.5px; color: #444; margin: 2px 0 0; }
+  .service-box p { font-size: 14.5px; color: #444444; margin: 2px 0 0; }
 
-  /* CV Data Layout */
+  /* CV Data Layout Block Columns */
   .cv-block { margin-bottom: 25px; }
   .cv-block-title { font-size: 13px; font-weight: 700; text-transform: uppercase; color: var(--sage); margin-bottom: 10px; letter-spacing: 0.05em; }
   .cv-row { display: flex; justify-content: space-between; gap: 20px; padding: 10px 0; border-top: 1px solid var(--line); }
   .cv-row:last-child { border-bottom: 1px solid var(--line); }
   .cv-role { font-weight: 600; font-size: 14.5px; }
   .cv-institution { color: var(--sage); font-size: 14px; }
-  .cv-date { font-family: var(--sans); font-size: 13.5px; color: var(--sage); white-space: nowrap; }
+  .cv-date { font-size: 13.5px; color: var(--sage); white-space: nowrap; }
 
   .cv-btn { text-decoration: underline; color: var(--ink); font-size: 14px; display: inline-block; margin-top: 8px; }
-  .cv-btn:hover { color: #444; }
+  .cv-btn:hover { color: #444444; }
 
   footer { border-top: 1px solid var(--line); padding-top: 20px; font-size: 13px; color: var(--sage); }
 </style>
@@ -126,32 +126,32 @@
 
 <div class="layout-container">
 
-  <!-- LEFT PANEL: FIXED MINIMAL SIDEBAR -->
+  <!-- LEFT PANEL: FIXED SIDEBAR CONTAINER -->
   <aside class="left-panel">
-    <h1><a href="#">Georgina Kinuthia</a></h1>
+    <h1><a href="index.html">Georgina Kinuthia</a></h1>
     <ul class="nav-menu">
-      <li><a href="#about">— About</a></li>
-      <li><a href="#portfolio">— Works</a></li>
-      <li><a href="#services">— Services</a></li>
-      <li><a href="#cv">— CV</a></li>
+      <li><a href="about.html">— About</a></li>
+      <li><a href="works.html">— Works</a></li>
+      <li><a href="services.html">— Services</a></li>
+      <li><a href="cv.html">— CV</a></li>
     </ul>
   </aside>
 
-  <!-- RIGHT PANEL: SCROLLABLE MAIN CONTENT AREA -->
+  <!-- RIGHT PANEL: SCROLLABLE CONTENT BODY -->
   <main class="right-panel">
     
-    <!-- Profile Action Header -->
+    <!-- Profile Social Interface Links Tray -->
     <div class="social-links">
-      <a href="#">LinkedIn</a>
-      <a href="#">GitHub</a>
-      <a href="#">Email</a>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="mailto:your-email@example.com">Email</a>
     </div>
 
-    <!-- About Section -->
+    <!-- About Content Section -->
     <section id="about">
       <h2>Bio</h2>
       
-      <!-- Profile Portrait -->
+      <!-- Portrait Graphic Placement -->
       <div class="profile-photo-container">
         <img src="portraitprofile.jpg" alt="Georgina Kinuthia" class="profile-photo">
       </div>
@@ -175,7 +175,7 @@
       </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Portfolio Project Section -->
     <section id="portfolio">
       <h2>Works</h2>
       <div class="project-node">
@@ -200,7 +200,7 @@
       </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Rendered Section -->
     <section id="services">
       <h2>Services</h2>
       <div class="service-box">
@@ -217,7 +217,7 @@
       </div>
     </section>
 
-    <!-- CV Section -->
+    <!-- CV Timeline Container -->
     <section id="cv">
       <h2>CV</h2>
       
@@ -240,7 +240,3 @@
       </div>
 
       <div class="cv-block">
-        <div class="cv-block-title">Education</div>
-        <div class="cv-row">
-          <div>
-            <div class="cv-role">Master's Programme, City Science — NFI Scholar</div>
