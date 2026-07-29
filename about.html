@@ -5,11 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About — Location-Based Problem Solving</title>
 <style>
-  /* Global Layout Styles matching index.html */
-  body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #111111; background-color: #ffffff; }
+  body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #111111; background-color: #ffffff; -webkit-font-smoothing: antialiased; }
   a { color: #111111; text-decoration: none; }
   h1 { font-size: 24px; margin: 0 0 24px; font-weight: 700; }
-  h2 { font-size: 16px; font-weight: 700; text-transform: uppercase; margin: 30px 0 20px; }
+  h2 { font-size: 16px; font-weight: 700; text-transform: uppercase; margin: 30px 0 20px; letter-spacing: 0.05em; border-bottom: 1px solid #eaeaea; padding-bottom: 8px; }
   p { margin: 0 0 1.5em; font-size: 15px; }
   .layout-container { display: flex; flex-direction: column; min-height: 100vh; }
   .left-panel { background: #ffffff; padding: 40px 30px; border-bottom: 1px solid #eaeaea; }
@@ -20,8 +19,12 @@
     .right-panel { margin-left: 25%; padding: 60px 60px 60px 80px; max-width: 720px; }
   }
   .nav-menu { list-style: none; padding: 0; }
-  .nav-menu a { color: #666666; }
+  .nav-menu li { margin-bottom: 10px; }
+  .nav-menu a { font-size: 14px; color: #666666; }
   .nav-menu a.active { color: #111111; text-decoration: underline; }
+  .social-links { display: flex; gap: 14px; margin-bottom: 30px; font-size: 14px; }
+  .social-links a { color: #666666; }
+  .social-links a:hover { color: #111111; text-decoration: underline; }
   .footer-stamp { border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 13px; color: #666666; margin-top: 50px; }
 </style>
 </head>
@@ -31,19 +34,24 @@
     <h1><a href="index.html">Georgina Kinuthia</a></h1>
     <ul class="nav-menu">
       <li><a href="about.html" class="active">— About</a></li>
-      <li><a href="index.html#portfolio">— Works</a></li>
-      <li><a href="index.html#services">— Services</a></li>
-      <li><a href="index.html#cv">— CV</a></li>
+      <li><a href="works.html">— Works</a></li>
+      <li><a href="services.html">— Services</a></li>
+      <li><a href="cv.html">— CV</a></li>
     </ul>
   </aside>
   <main class="right-panel">
+    <div class="social-links">
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="mailto:gk.student@normanfosterinstitute.org">Email</a>
+    </div>
     <h1>Location-Based Problem Solving</h1>
-    <p>Welcome to my website—a space where I share highlights from my work and reflect on daily efforts.</p>
+    <p>Welcome to my website — a space where I share insights from my work as well as project matrices mapping spatial conditions shaping individual and collective behaviors.</p>
     <h2>Mission</h2>
     <p>To work across disciplines to surface the hidden properties of the built environment.</p>
     <h2>Vision</h2>
-    <p>A built-environment industry that embraces the opportunities that lie in space to trigger positive social behaviors.</p>
-    <footer class="footer-stamp">© Copyright 2026 Georgina Kinuthia.</footer>
+    <p>A built-environment field that embraces the opportunities lying in space to trigger positive social behaviors.</p>
+    <footer class="footer-stamp">© Copyright 2026 Georgina Kinuthia. All text licensed CC-BY-NC 4.0.</footer>
   </main>
 </div>
 </body>
