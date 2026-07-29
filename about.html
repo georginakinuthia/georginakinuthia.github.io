@@ -3,56 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — Location-Based Problem Solving</title>
+<title>About — Georgina Kinuthia</title>
 <style>
-  body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #111111; background-color: #ffffff; -webkit-font-smoothing: antialiased; }
-  a { color: #111111; text-decoration: none; }
-  h1 { font-size: 24px; margin: 0 0 24px; font-weight: 700; }
-  h2 { font-size: 16px; font-weight: 700; text-transform: uppercase; margin: 30px 0 20px; letter-spacing: 0.05em; border-bottom: 1px solid #eaeaea; padding-bottom: 8px; }
-  p { margin: 0 0 1.5em; font-size: 15px; }
-  .layout-container { display: flex; flex-direction: column; min-height: 100vh; }
-  .left-panel { background: #ffffff; padding: 40px 30px; border-bottom: 1px solid #eaeaea; }
-  .right-panel { flex: 1; padding: 40px 30px; }
-  @media (min-width: 768px) {
-    .layout-container { flex-direction: row; }
-    .left-panel { width: 25%; min-width: 240px; position: fixed; top: 0; bottom: 0; left: 0; border-right: 1px solid #eaeaea; padding: 60px 40px; }
-    .right-panel { margin-left: 25%; padding: 60px 60px 60px 80px; max-width: 720px; }
+  /* ---------- BRAND FRESH AESTHETICS FRAMEWORK ---------- */
+  :root {
+    --ink: #1a2421;                 /* Deep charcoal green for text readability */
+    --paper: #fcfbfa;               /* Warm off-white canvas skin background */
+    --card: #f4f2ee;                /* Soft stone module container backgrounds */
+    --accent: #d35400;              /* Terracotta Clay highlight accent color */
+    --moss: #2e4a3f;                /* Deep Sustainable Moss Green for titles */
+    --sage: #7a8a81;                /* Muted sage gray for navigation links */
+    --line: #dcd9d4;                /* Clean architectural line break separators */
+    --system-serif: "Fraunces", "Georgia", serif;
+    --system-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
-  .nav-menu { list-style: none; padding: 0; }
-  .nav-menu li { margin-bottom: 10px; }
-  .nav-menu a { font-size: 14px; color: #666666; }
-  .nav-menu a.active { color: #111111; text-decoration: underline; }
-  .social-links { display: flex; gap: 14px; margin-bottom: 30px; font-size: 14px; }
-  .social-links a { color: #666666; }
-  .social-links a:hover { color: #111111; text-decoration: underline; }
-  .footer-stamp { border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 13px; color: #666666; margin-top: 50px; }
+
+  /* ---------- BASE PROTOCOL RESETS ---------- */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper); 
+    color: var(--ink);
+    font-family: var(--system-sans); 
+    font-size: 16px; 
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; transition: color 0.15s ease; }
+  a:hover { color: var(--moss); }
+  p { margin: 0 0 1.5em; text-align: justify; color: #2d3532; font-size: 15.5px; }
+
+  /* ---------- MODERN RESPONSIVE DOUBLE PANEL CONTAINER ---------- */
+  .layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* Left Fixed Sidebar Panel */
+  .left-panel {
+    background: var(--card);
+    padding: 60px 35px 30px;
+    border-bottom: 2px solid var(--line);
+  }
+
+  /* Right Panel Scroll Content Box */
+  .right-panel {
+    flex: 1;
+    padding: 50px 35px;
+  }
+
+  /* Desktop Multi-column Lock Override */
+  @media (min-width: 768px) {
+    .layout-container {
+      flex-direction: row;
+    }
+    .left-panel {
+      width: 28%;
+      min-width: 260px;
+      position: fixed;
+      top: 0; bottom: 0; left: 0;
+      border-bottom: none;
+      border-right: 2px solid var(--line);
+      padding: 80px 45px;
+    }
+    .right-panel {
+      margin-left: 28%;
+      padding: 80px 80px 80px 100px;
+      max-width: 820px;
+    }
+  }
+
+  /* ---------- TYPOGRAPHY & INTERFACE SYSTEMS ---------- */
+  .profile-link { font-family: var(--system-serif); font-size: 28px; font-weight: 700; margin: 0 0 32px; color: var(--moss); letter-spacing: -0.01em; display: block; }
+  .profile-link:hover { color: var(--accent); }
+  
+  h1 { font-family: var(--system-serif); font-size: 32px; font-weight: 700; margin: 0 0 24px; color: var(--moss); }
+  h2 { font-family: var(--system-serif); font-size: 18px; font-weight: 700; margin: 40px 0 18px; color: var(--moss); text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 2px solid var(--accent); padding-bottom: 6px; display: inline-block; }
+
+  /* Fully Synchronized Sidebar Navigation Menu Links */
+  .main-nav { list-style: none; padding: 0; margin: 0; }
+  .main-nav li { margin-bottom: 14px; }
+  .main-nav a { font-size: 15px; color: var(--sage); font-weight: 500; letter-spacing: 0.02em; display: inline-block; transition: transform 0.2s ease, color 0.2s ease; }
+  .main-nav a:hover { color: var(--moss); transform: translateX(4px); text-decoration: none; }
+
+  /* Active Inline Platform Contact Button Tray Styles */
+  .social-anchor-tray { display: flex; gap: 20px; flex-wrap: wrap; margin: 0 0 40px; font-size: 14.5px; font-weight: 600; font-family: var(--system-sans); }
+  .social-anchor-tray a { color: var(--sage); border-bottom: 2px solid transparent; padding-bottom: 2px; transition: color 0.15s ease, border-color 0.15s ease; }
+  .social-anchor-tray a:hover { color: var(--accent); border-bottom-color: var(--accent); text-decoration: none; }
+
+  footer { border-top: 1px solid var(--line); padding-top: 24px; font-size: 13px; color: var(--sage); margin-top: 80px; }
 </style>
 </head>
 <body>
+
 <div class="layout-container">
+
+  <!-- LEFT FIXED PANEL: MAIN NAVIGATION SIDEBAR -->
   <aside class="left-panel">
-    <h1><a href="index.html">Georgina Kinuthia</a></h1>
-    <ul class="nav-menu">
-      <li><a href="about.html" class="active">— About</a></li>
-      <li><a href="works.html">— Works</a></li>
-      <li><a href="services.html">— Services</a></li>
-      <li><a href="cv.html">— CV</a></li>
+    <a href="/index.html" class="profile-link">Georgina Kinuthia</a>
+    <ul class="main-nav">
+      <li><a href="/about.html" style="color: var(--moss); font-weight: 700;">— About</a></li>
+      <li><a href="/works.html">— Works</a></li>
+      <li><a href="/services.html">— Services</a></li>
+      <li><a href="/cv.html">— CV</a></li>
     </ul>
   </aside>
+
+  <!-- RIGHT PANEL: SCROLLABLE ESSAY WINDOW -->
   <main class="right-panel">
-    <div class="social-links">
+    
+    <!-- Verified Social Media Interface Links -->
+    <nav class="social-anchor-tray">
       <a href="https://linkedin.com" target="_blank">LinkedIn</a>
       <a href="https://github.com" target="_blank">GitHub</a>
-      <a href="mailto:gk.student@normanfosterinstitute.org">Email</a>
-    </div>
-    <h1>Location-Based Problem Solving</h1>
-    <p>Welcome to my website — a space where I share insights from my work as well as project matrices mapping spatial conditions shaping individual and collective behaviors.</p>
-    <h2>Mission</h2>
-    <p>To work across disciplines to surface the hidden properties of the built environment.</p>
-    <h2>Vision</h2>
-    <p>A built-environment field that embraces the opportunities lying in space to trigger positive social behaviors.</p>
-    <footer class="footer-stamp">© Copyright 2026 Georgina Kinuthia. All text licensed CC-BY-NC 4.0.</footer>
+      <a href="mailto:ginakinuthia@gmail.com">Email</a>
+    </nav>
+
+    <article class="text-column-panel">
+      <h1>Biography</h1>
+      
+      <p>I am an Urban Systems Architect and Norman Foster Institute Scholar based in Madrid, specializing in climate-resilient infrastructure, spatial analytics, and participatory urban design. My work bridges quantitative city science—using GIS frameworks and Python data modeling—with qualitative community realism to actively address urban inequality across rapidly growing cities in the Global South and Europe.</p>
+      
+      <p>Throughout my career, I have led and contributed to sustainable spatial designs, circular economy frameworks, and educational infrastructure networks across Kenya, Haiti, and Somalia. These projects were deployed in direct coordination with international development institutions and humanitarian partners, including the Food and Agriculture Organization (FAO) and USAID.</p>
+      
+      <p>My current research at the Norman Foster Institute (NFI) centers on building morphology, spatial vulnerability indicators, and public transit accessibility frameworks within Mexico City. I hold a Bachelor of Architecture from the University of Nairobi and am a registered professional with the Board of Registration of Architects and Quantity Surveyors (BORAQS) in Kenya.</p>
+
+      <h2>Core Philosophy</h2>
+      <p>I believe that buildings and public masterplans shouldn't be designed simply as isolated enclosures, but as deeply integrated systems that actively empower their inhabitants. By anchoring technical spatial data metrics directly inside local governance channels and community planning advisory workflows, we ensure complex infrastructure developments remain baseline maintainable, resource-efficient, and socially safe over long-term lifecycles.</p>
+    </article>
+
+    <footer>
+      <p>© Copyright 2026 Georgina Kinuthia. All text licensed CC-BY-NC 4.0.</p>
+    </footer>
   </main>
+
 </div>
+
 </body>
 </html>
