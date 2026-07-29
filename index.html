@@ -5,55 +5,143 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Georgina Kinuthia — Sustainable Urban Designer &amp; Architect</title>
 <style>
-  /* Core Reset and Minimalist Typography */
-  body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fff; }
-  a { color: #1a0dab; text-decoration: none; }
-  a:hover { text-decoration: underline; }
+  /* ---------- DESIGN VARIABLES ---------- */
+  :root {
+    --ink: #111111;                 /* Primary text matching Greg's layout */
+    --paper: #ffffff;               /* Clean canvas light background */
+    --sage: #666666;                /* Muted text for navigational anchors */
+    --line: #eaeaea;                /* Asymmetric panel border divider */
+    --system-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
 
-  /* Global Fixed Top Navigation Bar */
-  .global-nav { background-color: #2c3e50; padding: 14px 40px; display: flex; gap: 24px; align-items: center; }
-  .global-nav a { color: #fff; font-size: 15px; font-weight: 500; }
-  .global-nav a.brand { font-weight: 700; font-size: 17px; }
+  /* ---------- CORE RESET & BASE STYLES ---------- */
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
 
-  /* Core Main Content Split Grid Layout */
-  .main-wrapper { max-width: 1040px; margin: 40px auto; padding: 0 40px; display: grid; grid-template-columns: 1fr; gap: 40px; }
-  @media (min-width: 768px) { .main-wrapper { grid-template-columns: 2fr 1fr; } }
+  body {
+    margin: 0; 
+    background: var(--paper); 
+    color: var(--ink);
+    font-family: var(--system-sans); 
+    font-size: 15px; 
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
 
-  /* Left Side Text Content */
-  .content-column h1 { font-size: 32px; font-weight: 700; margin: 0 0 16px; }
-  .content-column p { margin: 0 0 1.5em; font-size: 15.5px; text-align: justify; }
+  a { color: var(--ink); text-decoration: none; }
+  p { margin: 0 0 1.5em; text-align: justify; }
 
-  /* Button Flexbox Container for Inline Contact Badges */
-  .badge-container { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
-  .social-badge { display: inline-flex; align-items: center; gap: 6px; border: 1px solid #dcdcdc; background-color: #f9f9f9; padding: 4px 12px; border-radius: 4px; font-size: 13px; color: #555; }
-  .social-badge:hover { background-color: #eee; color: #111; }
-  .social-badge svg { fill: currentColor; width: 14px; height: 14px; }
+  /* ---------- RESPONSIVE SPLIT PANELS GRID ---------- */
+  .layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
-  /* Right Side Photo Layout */
-  .photo-column { display: flex; justify-content: center; }
-  .circular-portrait { width: 240px; height: 240px; border-radius: 50%; object-fit: cover; }
-  footer { max-width: 1040px; margin: 60px auto 40px; padding: 20px 40px; border-top: 1px solid #eaeaea; font-size: 13.5px; color: #666; }
+  /* Left Panel Sidebar */
+  .left-panel {
+    background: var(--paper);
+    padding: 50px 30px 20px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* Right Panel Scroll Content Box */
+  .right-panel {
+    flex: 1;
+    padding: 40px 30px;
+  }
+
+  /* Desktop Split Grid Override Toggle */
+  @media (min-width: 768px) {
+    .layout-container {
+      flex-direction: row;
+    }
+    .left-panel {
+      width: 25%;
+      min-width: 240px;
+      position: fixed;
+      top: 0; bottom: 0; left: 0;
+      border-bottom: none;
+      border-right: 1px solid var(--line);
+      padding: 70px 40px;
+    }
+    .right-panel {
+      margin-left: 25%;
+      padding: 72px 60px 70px 80px;
+      max-width: 740px;
+    }
+  }
+
+  /* ---------- PANEL UI ELEMENTS ---------- */
+  h1 { font-size: 24px; font-weight: 700; margin: 0 0 24px; color: var(--ink); letter-spacing: -0.02em; }
+  h2 { font-size: 16px; font-weight: 700; margin: 0 0 20px; color: var(--ink); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
+
+  /* Synced Sidebar Anchor Links Navigation */
+  .nav-menu { list-style: none; padding: 0; margin: 0 0 40px; }
+  .nav-menu li { margin-bottom: 10px; }
+  .nav-menu a { font-size: 14px; color: var(--sage); font-weight: 400; }
+  .nav-menu a:hover { color: var(--ink); text-decoration: underline; }
+
+  /* Horizontal Tray Contact Layout Links */
+  .social-anchor-tray { display: flex; gap: 14px; flex-wrap: wrap; margin: 0 0 30px; font-size: 14px; }
+  .social-anchor-tray a { color: var(--sage); border-bottom: 1px solid transparent; }
+  .social-anchor-tray a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+  /* Image Frame Positioning */
+  .photo-frame { margin: 0 0 30px; text-align: left; }
+  .portrait-img { width: 130px; height: 130px; border-radius: 4px; object-fit: cover; display: block; filter: grayscale(100%); border: 1px solid var(--line); }
+
+  footer { border-top: 1px solid var(--line); padding-top: 20px; font-size: 13px; color: var(--sage); margin-top: 60px; }
 </style>
 </head>
 <body>
-  <nav class="global-nav">
-    <a href="/index.html" class="brand">Georgina Kinuthia</a>
-    <a href="/about.html">About</a>
-    <a href="/works.html">Works</a>
-  </nav>
 
-  <div class="main-wrapper">
-    <div class="content-column">
-      <h1>Georgina Kinuthia</h1>
-      <div class="badge-container">
-        <a href="https://linkedin.com" target="_blank" class="social-badge">LinkedIn</a>
-        <a href="https://github.com" target="_blank" class="social-badge">GitHub</a>
+<div class="layout-container">
+
+  <!-- LEFT PANEL: FIXED SIDEBAR BACKPLANE -->
+  <aside class="left-panel">
+    <h1><a href="/index.html">Georgina Kinuthia</a></h1>
+    <ul class="nav-menu">
+      <li><a href="/about.html">— About</a></li>
+      <li><a href="/works.html">— Works</a></li>
+      <li><a href="/services.html">— Services</a></li>
+      <li><a href="/cv.html">— CV</a></li>
+    </ul>
+  </aside>
+
+  <!-- RIGHT PANEL: SCROLLABLE MAIN DATA PANEL -->
+  <main class="right-panel">
+    
+    <!-- Top Action Direct Contact Anchors Tray -->
+    <nav class="social-anchor-tray">
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="mailto:gk.student@normanfosterinstitute.org">Email</a>
+    </nav>
+
+    <!-- Bio Summary Content Wrapper -->
+    <section>
+      <h2>Bio</h2>
+      
+      <!-- Normalized Monochromatic Circle Portrait -->
+      <div class="photo-frame">
+        <img src="/portraitprofile.jpg" alt="Georgina Kinuthia" class="portrait-img">
       </div>
-      <p>Sustainable urban designer and architect focusing on spatial data and participatory design.</p>
-    </div>
-    <div class="photo-column">
-      <img src="/portraitprofile.jpg" alt="Georgina Kinuthia" class="circular-portrait">
-    </div>
-  </div>
+
+      <p>I am Georgina Kinuthia, a sustainable urban designer and architect using spatial data and participatory design to close infrastructure equity gaps in resource-constrained cities. Trained as an architect at the University of Nairobi, I have since practiced across Kenya, Haiti, and Somalia — delivering civic, educational, and humanitarian infrastructure for partners including the FAO, USAID, and SHOFCO.</p>
+      
+      <p>In my current role as a Scholar at the Norman Foster Institute in Madrid, my focus lies in the development of GIS-based spatial vulnerability frameworks to identify risk distribution channels across Mexico City's Miguel Hidalgo borough. By parsing empirical data alongside neighborhood governance networks, I structure multi-scalar action indices that direct public funding into targeted resilient interventions.</p>
+
+      <p>In parallel, I partner with architectural studios and development groups to integrate low-carbon, locally source-derived building systems into planning matrices. I maintain close field ties with structural planning advisory committees to ensure complex spatial information remains community-accessible and baseline maintainable over extended lifecycles.</p>
+    </section>
+
+    <!-- Project Layout Structural License Footer -->
+    <footer>
+      <p>© Copyright 2026 Georgina Kinuthia. All text licensed CC-BY-NC 4.0.</p>
+    </footer>
+
+  </main>
+</div>
+
 </body>
 </html>
