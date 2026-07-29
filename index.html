@@ -5,16 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Georgina Kinuthia — Sustainable Urban Designer &amp; Architect</title>
 <style>
-  /* ---------- DESIGN CORE VARIABLES ---------- */
+  /* ---------- BRAND FRESH AESTHETICS FRAMEWORK ---------- */
   :root {
-    --nav-bg: #223143;              /* Greg's deep slate-blue navigation bar */
-    --ink: #222222;                 /* Primary high-contrast gray typography */
-    --paper: #ffffff;               /* Standard clean canvas background */
-    --badge-bg: #ffffff;            /* Badge button inner workspace background */
-    --badge-border: #cccccc;        /* Muted stroke parameter around buttons */
-    --badge-text: #555555;          /* Inner badge sub-label tone tint */
-    --link-color: #3b71ca;          /* Academic text link blue */
-    --system-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --ink: #1a2421;                 /* Deep charcoal green for ultra-readable text */
+    --paper: #fcfbfa;               /* Warm off-white canvas skin background */
+    --card: #f4f2ee;                /* Soft stone module container backgrounds */
+    --accent: #d35400;              /* Terracotta Clay highlight accent color */
+    --moss: #2e4a3f;                /* Deep Sustainable Moss Green for titles */
+    --sage: #7a8a81;                /* Muted sage gray for navigation links */
+    --line: #dcd9d4;                /* Clean architectural line break separators */
+    --system-serif: "Fraunces", "Georgia", serif;
+    --system-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
 
   /* ---------- BASE PROTOCOL RESETS ---------- */
@@ -22,219 +23,131 @@
   html { scroll-behavior: smooth; }
 
   body {
-    background-color: var(--paper);
+    background: var(--paper); 
     color: var(--ink);
-    font-family: var(--system-sans);
-    font-size: 16px;
-    line-height: 1.65;
+    font-family: var(--system-sans); 
+    font-size: 16px; 
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ---------- GLOBAL TOP NAVIGATION MENU BAR ---------- */
-  .global-navbar {
-    background-color: var(--nav-bg);
-    padding: 16px 60px;
+  a { color: var(--accent); text-decoration: none; transition: color 0.15s ease; }
+  a:hover { color: var(--moss); }
+  p { margin: 0 0 1.5em; text-align: justify; color: #2d3532; font-size: 15.5px; }
+
+  /* ---------- MODERN RESPONSIVE DOUBLE PANEL CONTAINER ---------- */
+  .layout-container {
     display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    flex-direction: column;
+    min-height: 100vh;
   }
 
-  .nav-inner-container {
-    width: 100%;
-    max-width: 1140px;
-    margin: 0 auto;
-    display: flex;
-    gap: 28px;
-    align-items: center;
+  /* Left Fixed Sidebar Panel */
+  .left-panel {
+    background: var(--card);
+    padding: 60px 35px 30px;
+    border-bottom: 2px solid var(--line);
   }
 
-  .global-navbar a {
-    color: rgba(255, 255, 255, 0.85);
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 400;
-    transition: color 0.15s ease;
-  }
-  .global-navbar a:hover {
-    color: #ffffff;
+  /* Right Panel Scroll Content Box */
+  .right-panel {
+    flex: 1;
+    padding: 50px 35px;
   }
 
-  .global-navbar a.navbar-brand {
-    font-weight: 600;
-    font-size: 17px;
-    color: #ffffff;
-    margin-right: 12px;
-  }
-
-  /* ---------- ASYMMETRIC CONTENT WRAPPER SPLIT ---------- */
-  .master-content-grid {
-    max-width: 1140px;
-    margin: 60px auto;
-    padding: 0 40px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 50px;
-    align-items: start;
-  }
-
-  /* Swaps to an uneven 2-column split on desktop viewports */
+  /* Desktop Multi-column Lock Override */
   @media (min-width: 768px) {
-    .master-content-grid {
-      grid-template-columns: 2fr 1fr; /* 2/3 biography text content, 1/3 portrait panel */
+    .layout-container {
+      flex-direction: row;
+    }
+    .left-panel {
+      width: 28%;
+      min-width: 260px;
+      position: fixed;
+      top: 0; bottom: 0; left: 0;
+      border-bottom: none;
+      border-right: 2px solid var(--line);
+      padding: 80px 45px;
+    }
+    .right-panel {
+      margin-left: 28%;
+      padding: 80px 80px 80px 100px;
+      max-width: 820px;
     }
   }
 
-  /* ---------- LEFT GRID PANEL: CONTENT BLOCKS ---------- */
-  .text-column-panel h1 {
-    font-size: 34px;
-    font-weight: 700;
-    margin-bottom: 14px;
-    color: #111111;
-    letter-spacing: -0.01em;
-  }
+  /* ---------- TYPOGRAPHY & INTERFACE SYSTEMS ---------- */
+  h1 { font-family: var(--system-serif); font-size: 28px; font-weight: 700; margin: 0 0 32px; color: var(--moss); letter-spacing: -0.01em; }
+  h1 a { color: var(--moss) !important; }
+  
+  h2 { font-family: var(--system-serif); font-size: 18px; font-weight: 700; margin: 0 0 24px; color: var(--moss); text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 2px solid var(--accent); padding-bottom: 6px; display: inline-block; }
 
-  .text-column-panel h2 {
-    font-size: 24px;
-    font-weight: 600;
-    margin: 32px 0 16px 0;
-    color: #111111;
-  }
+  /* Fully Synchronized Cross-Page Sidebar Navigation Menu Links */
+  .nav-menu { list-style: none; padding: 0; margin: 0; }
+  .nav-menu li { margin-bottom: 14px; }
+  .nav-menu a { font-size: 15px; color: var(--sage); font-weight: 500; letter-spacing: 0.02em; display: inline-block; transition: transform 0.2s ease, color 0.2s ease; }
+  .nav-menu a:hover { color: var(--moss); transform: translateX(4px); text-decoration: none; }
 
-  .text-column-panel p {
-    margin-bottom: 1.5em;
-    color: var(--ink);
-    text-align: justify;
-  }
+  /* Active Inline Platform Contact Button Tray Styles */
+  .social-anchor-tray { display: flex; gap: 20px; flex-wrap: wrap; margin: 0 0 40px; font-size: 14.5px; font-weight: 600; font-family: var(--system-sans); }
+  .social-anchor-tray a { color: var(--sage); border-bottom: 2px solid transparent; padding-bottom: 2px; transition: color 0.15s ease, border-color 0.15s ease; }
+  .social-anchor-tray a:hover { color: var(--accent); border-bottom-color: var(--accent); text-decoration: none; }
 
-  .text-column-panel p a {
-    color: var(--link-color);
-    text-decoration: none;
-  }
-  .text-column-panel p a:hover {
-    text-decoration: underline;
-  }
+  /* Minimal Profile Frame Border Box */
+  .photo-frame { margin: 0 0 35px; text-align: left; }
+  .portrait-img { width: 140px; height: 140px; border-radius: 8px; object-fit: cover; display: block; filter: saturate(105%) contrast(102%); border: 1px solid var(--line); box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
 
-  /* ---------- ICON BADGE GRID COMPONENT ---------- */
-  .badge-flex-tray {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 24px;
-  }
-
-  .button-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background-color: var(--badge-bg);
-    border: 1px solid var(--badge-border);
-    padding: 5px 12px;
-    border-radius: 4px;
-    font-size: 13.5px;
-    font-weight: 400;
-    color: var(--badge-text);
-    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-  }
-  .button-badge:hover {
-    background-color: #f5f5f5;
-    border-color: #b5bb5b5;
-    color: #111111;
-    text-decoration: none;
-  }
-
-  /* Vector parameters scaling to perfectly mirror reference display */
-  .button-badge svg {
-    width: 14px;
-    height: 14px;
-    fill: currentColor;
-    flex-shrink: 0;
-  }
-
-  /* ---------- RIGHT GRID PANEL: PORTRAIT DESIGN ---------- */
-  .photo-column-panel {
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-  }
-
-  .circular-portrait-frame {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    filter: grayscale(100%); /* Mirrors monochromatic portrait layout visual theme */
-    border: 1px solid var(--line);
-  }
-
-  /* ---------- LAYOUT FOOTER BLOCK ---------- */
-  footer {
-    max-width: 1140px;
-    margin: 80px auto 40px;
-    padding: 24px 40px 0;
-    border-top: 1px solid #eaeaea;
-    font-size: 13.5px;
-    color: #666666;
-  }
+  footer { border-top: 1px solid var(--line); padding-top: 24px; font-size: 13px; color: var(--sage); margin-top: 80px; }
 </style>
 </head>
 <body>
 
-  <!-- Top Dark Blue Global Navigation Menu Bar -->
-  <nav class="global-navbar">
-    <div class="nav-inner-container">
-      <a href="/index.html" class="navbar-brand">Georgina Kinuthia</a>
-      <a href="/about.html">About</a>
-      <a href="/works.html">Works</a>
-      <a href="/services.html">Services</a>
-      <a href="/cv.html">CV</a>
-    </div>
-  </nav>
+<div class="layout-container">
 
-  <!-- Page Layout Body Main Box Wrapper Grid Framework -->
-  <div class="master-content-grid">
+  <!-- LEFT PANEL: FIXED SIDEBAR CONTAINER -->
+  <aside class="left-panel">
+    <h1><a href="/index.html">Georgina Kinuthia</a></h1>
+    <ul class="nav-menu">
+      <li><a href="/about.html">— About</a></li>
+      <li><a href="/works.html">— Works</a></li>
+      <li><a href="/services.html">— Services</a></li>
+      <li><a href="/cv.html">— CV</a></li>
+    </ul>
+  </aside>
+
+  <!-- RIGHT PANEL: SCROLLABLE CONTENT BODY -->
+  <main class="right-panel">
     
-    <!-- Left Asymmetric Grid Column Panel: Bio Text and Info -->
-    <div class="text-column-panel">
-      <h1>Georgina Kinuthia</h1>
+    <!-- Profile Social Interface Links Tray -->
+    <nav class="social-anchor-tray">
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="mailto:ginakinuthia@gmail.com">Email</a>
+    </nav>
+
+    <!-- About Content Section -->
+    <section>
+      <h2>Bio</h2>
       
-      <!-- Exact Badge Platform Redirect Links Tray -->
-      <div class="badge-flex-tray">
-        <a href="https://linkedin.com" target="_blank" class="button-badge">
-          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          LinkedIn
-        </a>
-        <a href="https://github.com" target="_blank" class="button-badge">
-          <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          GitHub
-        </a>
-        <a href="mailto:ginakinuthia@gmail.com" class="button-badge">
-          <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 4.356v-8.712l4.623 4.356zm1.377 1.3l3.411 3.215c.168.159.389.239.611.239s.443-.08.611-.239l3.411-3.215 5.864 5.532h-19.774l5.864-5.532zm7.377-1.3l4.623-4.356v8.712l-4.623-4.356zm-6.377-1.637l-5.623-5.3h18l-5.623 5.3c-.612.577-1.602.577-2.215 0z"/></svg>
-          Email
-        </a>
+      <!-- Portrait Graphic Placement -->
+      <div class="photo-frame">
+        <img src="/portraitprofile.jpg" alt="Georgina Kinuthia" class="portrait-img">
       </div>
 
-      <h2>Bio</h2>
-      <p>I am Georgina Kinuthia, a sustainable urban designer and architect specializing in using spatial data and participatory design to support more equitable infrastructure planning in resource-constrained cities. Trained as an architect at the University of Nairobi, I have since practiced across Kenya, Haiti, and Somalia — delivering civic, educational, and humanitarian infrastructure for partners including the FAO, USAID, and SHOFCO.</p>
+      <p>I am Georgina Kinuthia, a sustainable urban designer and architect using spatial data and participatory design to close infrastructure equity gaps in resource-constrained cities. Trained as an architect at the University of Nairobi, I have since practiced across Kenya, Haiti, and Somalia — delivering civic, educational, and humanitarian infrastructure for partners including the FAO, USAID, and SHOFCO.</p>
       
-      <p>In my current role as a Scholar at the <a href="https://normanfosterinstitute.org" target="_blank">Norman Foster Institute</a> in Madrid, my focus lies in the development of GIS-based spatial vulnerability frameworks to identify risk distribution channels across Mexico City's Miguel Hidalgo borough. By parsing empirical data alongside neighborhood governance networks, I structure multi-scalar action indices that direct public funding into targeted resilient interventions.</p>
+      <p>In my current role as a Scholar at the Norman Foster Institute in Madrid, my focus lies in the development of GIS-based spatial vulnerability frameworks to identify risk distribution channels across Mexico City's Miguel Hidalgo borough. By parsing empirical data alongside neighborhood governance networks, I structure multi-scalar action indices that direct public funding into targeted resilient interventions.</p>
 
       <p>In parallel, I partner with architectural studios and development groups to integrate low-carbon, locally source-derived building systems into planning matrices. I maintain close field ties with structural planning advisory committees to ensure complex spatial information remains community-accessible and baseline maintainable over extended lifecycles.</p>
-    </div>
+    </section>
 
-    <!-- Right Grid Column Panel: Floating Circle Portrait -->
-    <div class="photo-column-panel">
-      <img src="/portraitprofile.jpg" alt="Georgina Kinuthia" class="circular-portrait-frame">
-    </div>
+    <!-- Unified Footprint Footer -->
+    <footer>
+      <p>© Copyright 2026 Georgina Kinuthia. All text licensed CC-BY-NC 4.0.</p>
+    </footer>
 
-  </div>
-
-  <!-- Footer Layout Block Section -->
-  <footer>
-    &copy; Copyright 2026 Georgina Kinuthia. Except where otherwise noted. All text licensed CC-BY-NC 4.0.
-  </footer>
+  </main>
+</div>
 
 </body>
 </html>
