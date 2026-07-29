@@ -70,7 +70,7 @@
       flex-direction: column;
     }
     .right-panel {
-      margin-left: 30%; /* Pushes content right to avoid overlay */
+      margin-left: 30%;
       padding: 60px 80px;
       max-width: 800px;
     }
@@ -96,6 +96,10 @@
 
   section { margin-bottom: 60px; }
   h2 { font-family: var(--serif); font-size: 1.6rem; margin: 0 0 20px; font-weight: 600; }
+
+  /* Profile Photo Styling */
+  .profile-photo-container { margin: 24px 0 30px; text-align: left; }
+  .profile-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); display: block; }
 
   /* Focus Stack Items */
   .focus-stack { margin-top: 30px; }
@@ -163,13 +167,14 @@
     </div>
 
     <!-- About Section -->
-    <!-- Profile Picture Block -->
-<div style="margin: 30px 0; text-align: left;">
-  <img src="portraitprofile.jpg" alt="Georgina Kinuthia" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line);">
-</div>
-
     <section id="about">
       <h2>Bio</h2>
+      
+      <!-- Profile Picture Block -->
+      <div class="profile-photo-container">
+        <img src="portraitprofile.jpg" alt="Georgina Kinuthia" class="profile-photo">
+      </div>
+
       <p>I specialize in using spatial data and participatory design to support more equitable infrastructure planning in resource-constrained cities.</p>
       <p>Trained as an architect at the University of Nairobi, I've since practiced across Kenya, Haiti, and Somalia &mdash; delivering civic, educational, and humanitarian infrastructure for partners including the FAO, USAID, and SHOFCO. I'm currently a Scholar at the Norman Foster Institute in Madrid, building GIS-based spatial vulnerability frameworks for Mexico City's Miguel Hidalgo borough.</p>
 
@@ -212,24 +217,14 @@
         <h3>Iftiin Foundation Peace Hub</h3>
         <p>Vocational training, psychosocial services, and enterprise incubation hub using passive cooling and locally quarried limestone &mdash; Adaptiv, with USAID.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Services</h2>
-    <div class="service-box">
-      <h3><span>01</span> Spatial Vulnerability &amp; Equity Diagnostics</h3>
-      <p>GIS-based mapping and index-building to identify where infrastructure and safety gaps fall hardest.</p>
-    </div>
-    <div class="service-box">
-      <h3><span>02</span> Participatory Design Facilitation</h3>
-      <p>Community planning workshops and advisory committees that ground design decisions in lived priorities.</p>
-    </div>
-    <div class="service-box">
-      <h3><span>03</span> Sustainable &amp; Circular Masterplanning</h3>
-      <p>Low-carbon, locally sourced design strategies for climate-vulnerable, resource-constrained sites.</p>
-    </div>
-  </section>
-
-  <!-- CV Section -->
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Services</h2>
+      <div class="service-box">
+        <h3><span>01</span> Spatial Vulnerability &amp; Equity Diagnostics</h3>
+        <p>GIS-based mapping and index-building to identify where infrastructure and safety gaps fall hardest.</p>
+      </div>
+      <div class="service-box">
+        <h3><span>02</span> Participatory Design Facilitation</h3>
