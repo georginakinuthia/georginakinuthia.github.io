@@ -5,69 +5,182 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services — Georgina Kinuthia</title>
 <style>
-  body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #111111; background-color: #ffffff; -webkit-font-smoothing: antialiased; }
-  a { color: #111111; text-decoration: none; }
-  h1 { font-size: 24px; font-weight: 700; margin: 0 0 24px; letter-spacing: -0.02em; }
-  h2 { font-size: 16px; font-weight: 700; text-transform: uppercase; margin: 40px 0 20px; letter-spacing: 0.05em; border-bottom: 1px solid #eaeaea; padding-bottom: 8px; }
-  h3 { font-size: 15px; font-weight: 700; text-transform: uppercase; margin: 30px 0 15px; letter-spacing: 0.05em; }
-  p { font-size: 15px; color: #222222; margin: 0 0 1.5em; }
-  ul { margin: 0 0 1.5em; padding-left: 20px; font-size: 15px; }
-  li { margin-bottom: 8px; }
-  .layout-container { display: flex; flex-direction: column; min-height: 100vh; }
-  .left-panel { background: #ffffff; padding: 40px 30px; border-bottom: 1px solid #eaeaea; }
-  .right-panel { flex: 1; padding: 40px 30px; }
-  @media (min-width: 768px) {
-    .layout-container { flex-direction: row; }
-    .left-panel { width: 25%; min-width: 240px; position: fixed; top: 0; bottom: 0; left: 0; border-right: 1px solid #eaeaea; padding: 60px 40px; }
-    .right-panel { margin-left: 25%; padding: 60px 60px 60px 80px; max-width: 720px; }
+  /* ---------- BRAND FRESH AESTHETICS FRAMEWORK ---------- */
+  :root {
+    --ink: #1a2421;                 /* Deep charcoal green for text readability */
+    --paper: #fcfbfa;               /* Warm off-white canvas skin background */
+    --card: #f4f2ee;                /* Soft stone module container backgrounds */
+    --accent: #d35400;              /* Terracotta Clay highlight accent color */
+    --moss: #2e4a3f;                /* Deep Sustainable Moss Green for titles */
+    --sage: #7a8a81;                /* Muted sage gray for navigation links */
+    --line: #dcd9d4;                /* Clean architectural line break separators */
+    --system-serif: "Fraunces", "Georgia", serif;
+    --system-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --system-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   }
-  .profile-link { font-size: 24px; font-weight: 700; display: block; margin-bottom: 24px; }
+
+  /* ---------- BASE PROTOCOL RESETS ---------- */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper); 
+    color: var(--ink);
+    font-family: var(--system-sans); 
+    font-size: 16px; 
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; transition: color 0.15s ease; }
+  a:hover { color: var(--moss); }
+  p { margin: 0 0 1.5em; text-align: justify; color: #2d3532; font-size: 15.5px; }
+  ul { margin: 0 0 1.5em 20px; font-size: 15.5px; color: #2d3532; }
+  li { margin-bottom: 6px; }
+
+  /* ---------- MODERN RESPONSIVE DOUBLE PANEL CONTAINER ---------- */
+  .layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* Left Fixed Sidebar Panel */
+  .left-panel {
+    background: var(--card);
+    padding: 60px 35px 30px;
+    border-bottom: 2px solid var(--line);
+  }
+
+  /* Right Panel Scroll Content Box */
+  .right-panel {
+    flex: 1;
+    padding: 50px 35px;
+  }
+
+  /* Desktop Multi-column Lock Override */
+  @media (min-width: 768px) {
+    .layout-container {
+      flex-direction: row;
+    }
+    .left-panel {
+      width: 28%;
+      min-width: 260px;
+      position: fixed;
+      top: 0; bottom: 0; left: 0;
+      border-bottom: none;
+      border-right: 2px solid var(--line);
+      padding: 80px 45px;
+    }
+    .right-panel {
+      margin-left: 28%;
+      padding: 80px 80px 80px 100px;
+      max-width: 820px;
+    }
+  }
+
+  /* ---------- TYPOGRAPHY & INTERFACE SYSTEMS ---------- */
+  .profile-link { font-family: var(--system-serif); font-size: 28px; font-weight: 700; margin: 0 0 32px; color: var(--moss); letter-spacing: -0.01em; display: block; }
+  .profile-link:hover { color: var(--accent); }
+  
+  h1 { font-family: var(--system-serif); font-size: 32px; font-weight: 700; margin: 0 0 24px; color: var(--moss); }
+  h2 { font-family: var(--system-serif); font-size: 18px; font-weight: 700; margin: 45px 0 14px 0; color: var(--moss); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 2px solid var(--accent); padding-bottom: 4px; display: inline-block; }
+  h3 { font-size: 17px; font-weight: 600; margin: 28px 0 10px; color: var(--ink); }
+
+  /* Fully Synchronized Sidebar Navigation Menu Links */
   .main-nav { list-style: none; padding: 0; margin: 0; }
-  .main-nav li { margin-bottom: 10px; }
-  .main-nav a { font-size: 14px; color: #666666; }
-  .main-nav a.active { color: #111111; font-weight: bold; }
-  .social-links { display: flex; gap: 14px; margin-bottom: 30px; font-size: 14px; }
-  .social-links a { color: #666666; }
-  .tech-highlight { font-family: monospace; font-size: 13.5px; background: #f7f7f7; padding: 3px 8px; border-radius: 3px; display: inline-block; margin: 0 4px 6px 0; border: 1px solid #e0e0e0; }
-  .footer-stamp { border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 13px; color: #666666; margin-top: 60px; }
+  .main-nav li { margin-bottom: 14px; }
+  .main-nav a { font-size: 15px; color: var(--sage); font-weight: 500; letter-spacing: 0.02em; display: inline-block; transition: transform 0.2s ease, color 0.2s ease; }
+  .main-nav a:hover { color: var(--moss); transform: translateX(4px); text-decoration: none; }
+
+  /* Active Inline Platform Contact Button Tray Styles */
+  .social-anchor-tray { display: flex; gap: 20px; flex-wrap: wrap; margin: 0 0 40px; font-size: 14.5px; font-weight: 600; font-family: var(--system-sans); }
+  .social-anchor-tray a { color: var(--sage); border-bottom: 2px solid transparent; padding-bottom: 2px; transition: color 0.15s ease, border-color 0.15s ease; }
+  .social-anchor-tray a:hover { color: var(--accent); border-bottom-color: var(--accent); text-decoration: none; }
+
+  /* Software Tool Badges */
+  .tool-badge-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0 18px; }
+  .tool-tag { font-family: var(--system-mono); font-size: 12px; background: var(--card); border: 1px solid var(--line); padding: 2px 8px; border-radius: 4px; color: var(--sage); }
+
+  /* Worked With Block Styles */
+  .work-recipient-block { margin-bottom: 24px; padding-left: 4px; }
+  .work-recipient-block h4 { font-size: 15.5px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  .work-recipient-block p { font-size: 14.5px; color: #555555; margin: 0; text-align: justify; }
+
+  footer { border-top: 1px solid var(--line); padding-top: 24px; font-size: 13px; color: var(--sage); margin-top: 80px; }
 </style>
 </head>
 <body>
+
 <div class="layout-container">
+
+  <!-- LEFT FIXED PANEL: SIDEBAR MENU LINKS -->
   <aside class="left-panel">
-    <a href="index.html" class="profile-link">Georgina Kinuthia</a>
+    <a href="/index.html" class="profile-link">Georgina Kinuthia</a>
     <ul class="main-nav">
-      <li><a href="about.html">— About</a></li>
-      <li><a href="works.html">— Works</a></li>
-      <li><a href="services.html" class="active">— Services</a></li>
-      <li><a href="cv.html">— CV</a></li>
+      <li><a href="/about.html">— About</a></li>
+      <li><a href="/works.html">— Works</a></li>
+      <li><a href="/services.html" style="color: var(--moss); font-weight: 700;">— Services</a></li>
+      <li><a href="/cv.html">— CV</a></li>
     </ul>
   </aside>
+
+  <!-- RIGHT PANEL: CONTENT MODULES -->
   <main class="right-panel">
-    <div class="social-links">
+    
+    <!-- Active Triggers Navigation Header -->
+    <nav class="social-anchor-tray">
       <a href="https://linkedin.com" target="_blank">LinkedIn</a>
       <a href="https://github.com" target="_blank">GitHub</a>
-      <a href="mailto:gk.student@normanfosterinstitute.org">Email</a>
-    </div>
+      <a href="mailto:ginakinuthia@gmail.com">Email</a>
+    </nav>
+
     <h1>Services</h1>
-    <p>As a spatial data consultant and architect, I walk the journey with teams to ensure analytical pipelines are functional and independently maintainable.</p>
-    <ul>
-      <li>Urban diagnostic modeling frameworks</li>
-      <li>Morphological metrics for testing public scenarios</li>
-      <li>Network configurations for spatial ecosystems</li>
-      <li>Interactive web data visualizations</li>
-    </ul>
-    <h3>Tools &amp; Software</h3>
-    <div style="margin-bottom: 25px;">
-      <span class="tech-highlight">QGIS</span><span class="tech-highlight">Python (GeoPandas)</span>
-      <span class="tech-highlight">PostGIS - SQL</span><span class="tech-highlight">ArcGIS Pro</span>
-      <span class="tech-highlight">AutoCAD</span><span class="tech-highlight">Rhino 3D</span>
+    <p>My global practice bridges spatial data analytics, participatory design, and climate-responsive architecture to close critical infrastructure equity gaps across resource-constrained urban landscapes.</p>
+
+    <!-- CORE COMPETENCY BREAKDOWN -->
+    <h2>Expertise Framework</h2>
+
+    <h3>1. GIS &amp; Spatial Vulnerability Analytics</h3>
+    <div class="tool-badge-row">
+      <span class="tool-tag">QGIS</span>
+      <span class="tool-tag">Google Colab</span>
     </div>
-    <h2>Collaborators</h2>
-    <p><strong>Architect Studios &amp; Planners:</strong> Delivering evidence-based morphological diagnostics to reinforce planning briefs.</p>
-    <p><strong>Municipal Alliances:</strong> Building structured vulnerability data index sets tracking service access distribution lanes.</p>
-    <footer class="footer-stamp">© Copyright 2026 Georgina Kinuthia. All text licensed CC-BY-NC 4.0.</footer>
-  </main>
-</div>
-</body>
-</html>
+    <ul>
+      <li><strong>Multi-Layer Vulnerability Mapping:</strong> Developing custom spatial risk frameworks (such as the V.E.R.A. index in Mexico City) that synthesize multi-layered GIS datasets to identify spatial equity gaps, mobility barriers, and environmental risk corridors.</li>
+      <li><strong>Site Suitability &amp; Network Optimization:</strong> Utilizing geographic spatial overlay models to optimize site selection for public and circular infrastructure based on local waste flow density parameters, access thresholds, and demographic heatmaps.</li>
+    </ul>
+
+    <h3>2. Participatory &amp; Community-Centered Co-Design</h3>
+    <div class="tool-badge-row">
+      <span class="tool-tag">Notion</span>
+      <span class="tool-tag">Google Workspace Notebook</span>
+      <span class="tool-tag">Verbal Presentations</span>
+    </div>
+    <ul>
+      <li><strong>Community Advisory &amp; Workshop Facilitation:</strong> Forming and guiding Community Planning Advisory Committees (CPACs) comprising local elders, youth leaders, women’s groups, and faith-based actors to co-author civic assets.</li>
+      <li><strong>Trauma-Informed &amp; Universal Design Protocols:</strong> Designing safe, inclusive spatial environments tailored for vulnerable populations—such as GBV survivors, human rights defenders, and displaced youth—incorporating privacy gradients, sensory regulation, and paraplegic accessibility features.</li>
+      <li><strong>Field Research &amp; Needs Assessment:</strong> Conducting household surveys and participatory mapping workshops to ground large technical masterplans in resident priorities and lived realities through polished verbal presentations and collaborative data tracking.</li>
+    </ul>
+
+    <h3>3. Sustainable Master Planning &amp; Climate-Responsive Architecture</h3>
+    <div class="tool-badge-row">
+      <span class="tool-tag">ArchiCAD</span>
+      <span class="tool-tag">Revit</span>
+      <span class="tool-tag">Rhino</span>
+      <span class="tool-tag">Grasshopper</span>
+      <span class="tool-tag">Generative Designs</span>
+    </div>
+    <ul>
+      <li><strong>Low-Carbon Material Specification:</strong> Integrating locally sourced, regenerative material systems—such as compressed earth blocks (CEBs), bamboo, stone, and lime mortar—to minimize embodied carbon and stimulate regional supply chains.</li>
+      <li><strong>Passive Climate Engineering:</strong> Designing site-responsive building massing, stack ventilation chimneys, high thermal-mass envelopes, and overhang shades that reduce reliance on active cooling, achieving 4–6°C indoor reductions.</li>
+      <li><strong>Off-Grid Utility Systems Integration:</strong> Incorporating rainwater harvesting loops, graywater reuse setups, solar-hybrid microgrids, and nature-based stormwater management infrastructure directly into regional masterplans through parametric and computational computational modeling pipelines.</li>
+    </ul>
+
+    <h3>4. Circular Economy &amp; Decentralized Urban Infrastructure</h3>
+    <div class="tool-badge-row">
+      <span class="tool-tag">Adobe</span>
+      <span class="tool-tag">MS Office</span>
+    </div>
+    <ul>
+      <li><strong>Regenerative Infrastructure Models:</strong> Designing modular, decentralized circular facilities (such as the Black Soldier Fly Bioconversion Hub for the FAO Green Cities Initiative) that divert organic waste from dumpsites to produce bio-fertilizers and protein feed.</li>
