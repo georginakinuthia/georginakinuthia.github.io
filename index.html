@@ -7,14 +7,14 @@
 <style>
   /* ---------- DESIGN VARIABLES ---------- */
   :root {
-    --ink: #111111;                 /* Primary text matching Greg's layout */
-    --paper: #ffffff;               /* Clean canvas light background */
-    --sage: #666666;                /* Muted text for navigational anchors */
-    --line: #eaeaea;                /* Asymmetric panel border divider */
+    --ink: #111111;                 /* Primary text color */
+    --paper: #ffffff;               /* Clean workspace background */
+    --sage: #666666;                /* Muted text for secondary paths */
+    --line: #eaeaea;                /* Asymmetric side column divider line */
     --system-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
 
-  /* ---------- CORE RESET & BASE STYLES ---------- */
+  /* ---------- BASE FRAMEWORK STYLES ---------- */
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
 
@@ -31,27 +31,27 @@
   a { color: var(--ink); text-decoration: none; }
   p { margin: 0 0 1.5em; text-align: justify; }
 
-  /* ---------- RESPONSIVE SPLIT PANELS GRID ---------- */
+  /* ---------- RESPONSIVE DOUBLE COLUMN SYSTEM ---------- */
   .layout-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
 
-  /* Left Panel Sidebar */
+  /* Mobile Left Sidebar */
   .left-panel {
     background: var(--paper);
     padding: 50px 30px 20px;
     border-bottom: 1px solid var(--line);
   }
 
-  /* Right Panel Scroll Content Box */
+  /* Mobile Right Panel content box */
   .right-panel {
     flex: 1;
     padding: 40px 30px;
   }
 
-  /* Desktop Split Grid Override Toggle */
+  /* Desktop Multi-column Lock Override */
   @media (min-width: 768px) {
     .layout-container {
       flex-direction: row;
@@ -72,24 +72,24 @@
     }
   }
 
-  /* ---------- PANEL UI ELEMENTS ---------- */
+  /* ---------- TYPOGRAPHY & ELEMENTS INTERFACE ---------- */
   h1 { font-size: 24px; font-weight: 700; margin: 0 0 24px; color: var(--ink); letter-spacing: -0.02em; }
   h2 { font-size: 16px; font-weight: 700; margin: 0 0 20px; color: var(--ink); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
 
-  /* Synced Sidebar Anchor Links Navigation */
+  /* Synchronized Cross-Page Sidebar Navigation Menu Links */
   .nav-menu { list-style: none; padding: 0; margin: 0 0 40px; }
   .nav-menu li { margin-bottom: 10px; }
   .nav-menu a { font-size: 14px; color: var(--sage); font-weight: 400; }
   .nav-menu a:hover { color: var(--ink); text-decoration: underline; }
 
-  /* Horizontal Tray Contact Layout Links */
+  /* Active Inline Platform Contact Button Tray Styles */
   .social-anchor-tray { display: flex; gap: 14px; flex-wrap: wrap; margin: 0 0 30px; font-size: 14px; }
   .social-anchor-tray a { color: var(--sage); border-bottom: 1px solid transparent; }
   .social-anchor-tray a:hover { color: var(--ink); border-bottom-color: var(--ink); }
 
-  /* Image Frame Positioning */
+  /* Minimal Profile Frame Border Box */
   .photo-frame { margin: 0 0 30px; text-align: left; }
-  .portrait-img { width: 130px; height: 130px; border-radius: 4px; object-fit: cover; display: block; filter: grayscale(100%); border: 1px solid var(--line); }
+  .portrait-img { width: 140px; height: 140px; border-radius: 4px; object-fit: cover; display: block; filter: grayscale(100%); border: 1px solid var(--line); }
 
   footer { border-top: 1px solid var(--line); padding-top: 20px; font-size: 13px; color: var(--sage); margin-top: 60px; }
 </style>
@@ -98,7 +98,7 @@
 
 <div class="layout-container">
 
-  <!-- LEFT PANEL: FIXED SIDEBAR BACKPLANE -->
+  <!-- LEFT PANEL: FIXED SIDEBAR LINK SYSTEM -->
   <aside class="left-panel">
     <h1><a href="/index.html">Georgina Kinuthia</a></h1>
     <ul class="nav-menu">
@@ -109,21 +109,21 @@
     </ul>
   </aside>
 
-  <!-- RIGHT PANEL: SCROLLABLE MAIN DATA PANEL -->
+  <!-- RIGHT PANEL: SCROLLABLE MAIN LAYOUT SYSTEM -->
   <main class="right-panel">
     
-    <!-- Top Action Direct Contact Anchors Tray -->
+    <!-- ACTIVE TRUTHFUL INTERFACE BUTTON REDIRECT TRIPS -->
     <nav class="social-anchor-tray">
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-      <a href="https://github.com" target="_blank">GitHub</a>
-      <a href="mailto:gk.student@normanfosterinstitute.org">Email</a>
+      <a href="https://www.linkedin.com/in/gina-kinuthia/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/georginakinuthia" target="_blank">GitHub</a>
+      <a href="mailto:ginakinuthia@gmail.com">Email</a>
     </nav>
 
-    <!-- Bio Summary Content Wrapper -->
+    <!-- Core Biography Component Section -->
     <section>
       <h2>Bio</h2>
       
-      <!-- Normalized Monochromatic Circle Portrait -->
+      <!-- Verified Monochromatic Portrait Frame Placement -->
       <div class="photo-frame">
         <img src="/portraitprofile.jpg" alt="Georgina Kinuthia" class="portrait-img">
       </div>
@@ -135,7 +135,7 @@
       <p>In parallel, I partner with architectural studios and development groups to integrate low-carbon, locally source-derived building systems into planning matrices. I maintain close field ties with structural planning advisory committees to ensure complex spatial information remains community-accessible and baseline maintainable over extended lifecycles.</p>
     </section>
 
-    <!-- Project Layout Structural License Footer -->
+    <!-- Structural License Footnote Block -->
     <footer>
       <p>© Copyright 2026 Georgina Kinuthia. All text licensed CC-BY-NC 4.0.</p>
     </footer>
