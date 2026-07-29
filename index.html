@@ -4,23 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Georgina Kinuthia — Sustainable Urban Designer &amp; Architect</title>
-<link rel="preconnect" href="https://googleapis.com">
-<link rel="preconnect" href="https://gstatic.com" crossorigin>
-<link href="https://googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
   :root {
-    --ink: #1A2421;
-    --paper: #F5F6F2;
-    --card: #ECEFE9;
-    --teal: #0F4A46;
-    --teal-deep: #0A3532;
-    --coral: #E8543A;
-    --sage: #5B645F;
-    --line: #DADFDA;
-    --serif: 'Fraunces', Georgia, serif;
-    --sans: 'IBM Plex Sans', -apple-system, sans-serif;
-    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --ink: #111111;
+    --paper: #ffffff;
+    --card: #f9f9f9;
+    --teal: #111111;
+    --coral: #666666;
+    --sage: #666666;
+    --line: #eaeaea;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   }
 
   * { box-sizing: border-box; }
@@ -28,155 +23,141 @@
 
   body {
     margin: 0; background: var(--paper); color: var(--ink);
-    font-family: var(--sans); font-size: 16px; line-height: 1.6;
+    font-family: var(--sans); font-size: 15px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
   }
 
-  a { color: var(--teal); text-decoration: none; }
+  a { color: var(--ink); text-decoration: none; }
+  p { margin: 0 0 1.5em; color: #222; }
 
-  /* ---------- SPLIT GRID LAYOUT ---------- */
+  /* ---------- MASTER GRID SPLIT LAYOUT ---------- */
   .layout-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
 
-  /* Fixed Left Column Panel */
+  /* Left Fixed Column Panel */
   .left-panel {
     background: var(--paper);
-    padding: 40px 24px;
+    padding: 50px 30px 30px;
     border-bottom: 1px solid var(--line);
   }
 
-  /* Scrollable Right Column Panel */
+  /* Right Scrollable Column Panel */
   .right-panel {
     flex: 1;
-    padding: 40px 24px;
+    padding: 40px 30px;
   }
 
-  /* Desktop Switch */
+  /* Desktop View Grid Lock */
   @media (min-width: 768px) {
     .layout-container {
       flex-direction: row;
     }
     .left-panel {
-      width: 30%;
-      min-width: 280px;
+      width: 28%;
+      min-width: 250px;
       position: fixed;
       top: 0; bottom: 0; left: 0;
       border-bottom: none;
       border-right: 1px solid var(--line);
-      padding: 60px 40px;
-      display: flex;
-      flex-direction: column;
+      padding: 70px 40px;
     }
     .right-panel {
-      margin-left: 30%;
-      padding: 60px 80px;
-      max-width: 800px;
+      margin-left: 28%; /* Keeps right content perfectly aligned to panel edge */
+      padding: 72px 60px 70px 80px;
+      max-width: 740px;
     }
   }
 
-  /* ---------- COMPONENTS & LISTS ---------- */
-  .site-title { font-family: var(--serif); font-size: 1.8rem; margin: 0 0 20px; font-weight: 600; }
-  
+  /* ---------- TYPOGRAPHY & INTERFACE ELEMENTS ---------- */
+  h1 { font-size: 24px; font-weight: 700; margin: 0 0 24px; color: var(--ink); letter-spacing: -0.02em; }
+  h2 { font-size: 16px; font-weight: 700; margin: 0 0 20px; color: var(--ink); text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
+  h3 { font-size: 15px; font-weight: 600; margin: 0 0 6px; color: var(--ink); }
+
   .nav-menu { list-style: none; padding: 0; margin: 0 0 40px; }
-  .nav-menu li { margin-bottom: 12px; }
-  .nav-menu a { font-family: var(--mono); font-size: 0.85rem; color: var(--sage); text-transform: uppercase; }
-  .nav-menu a:hover { color: var(--teal); }
+  .nav-menu li { margin-bottom: 10px; }
+  .nav-menu a { font-size: 14px; color: var(--sage); font-weight: 400; }
+  .nav-menu a:hover { color: var(--ink); text-decoration: underline; }
 
-  .hero-name { font-family: var(--serif); font-size: 2.8rem; font-weight: 600; margin: 0 0 10px; }
-  
-  .social-links { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0 40px; }
-  .social-links a { font-family: var(--mono); font-size: 0.85rem; color: var(--teal); border-bottom: 1px solid transparent; }
-  .social-links a:hover { border-bottom-color: var(--teal); }
+  /* Social Anchor Row */
+  .social-links { display: flex; gap: 14px; flex-wrap: wrap; margin: 0 0 30px; font-family: var(--sans); font-size: 14px; }
+  .social-links a { color: #666; border-bottom: 1px solid transparent; }
+  .social-links a:hover { color: var(--ink); border-bottom-color: var(--ink); }
 
-  .scalebar-row { display: flex; align-items: center; gap: 10px; color: var(--sage); margin-bottom: 40px; }
-  .scalebar-row span { font-family: var(--mono); font-size: 0.7rem; }
-  .scalebar-row .rule { height: 1px; background: var(--line); flex: 1; }
+  section { margin-bottom: 55px; }
 
-  section { margin-bottom: 60px; }
-  h2 { font-family: var(--serif); font-size: 1.6rem; margin: 0 0 20px; font-weight: 600; }
+  /* Profile Photo Frame */
+  .profile-photo-container { margin: 0 0 30px; text-align: left; }
+  .profile-photo { width: 140px; height: 140px; border-radius: 4px; object-fit: cover; display: block; filter: grayscale(100%); }
 
-  /* Profile Photo Styling */
-  .profile-photo-container { margin: 24px 0 30px; text-align: left; }
-  .profile-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); display: block; }
+  /* Focus Text Categories */
+  .focus-stack { margin-top: 25px; }
+  .focus-item { padding: 14px 0; border-bottom: 1px solid #f5f5f5; }
+  .focus-item:first-child { border-top: 1px solid #f5f5f5; }
+  .focus-item p { font-size: 14px; color: #555; margin: 0; }
 
-  /* Focus Stack Items */
-  .focus-stack { margin-top: 30px; }
-  .focus-item { border-top: 1px solid var(--line); padding: 16px 0; }
-  .focus-item h3 { font-family: var(--sans); font-size: 1rem; font-weight: 600; margin: 0 0 6px; }
-  .focus-item p { font-size: 0.9rem; color: var(--sage); margin: 0; }
+  /* Portfolio Timelines */
+  .project-node { margin-bottom: 28px; }
+  .project-node .meta { font-family: var(--mono); font-size: 12px; color: var(--coral); margin-bottom: 4px; }
+  .project-node p { font-size: 14.5px; color: #444; margin: 4px 0 0; }
 
-  /* Portfolio Node Cards */
-  .project-node { border-left: 2px solid var(--teal); padding-left: 20px; margin-bottom: 30px; }
-  .project-node .meta { font-family: var(--mono); font-size: 0.7rem; color: var(--coral); text-transform: uppercase; margin-bottom: 4px; }
-  .project-node h3 { font-family: var(--sans); font-size: 1.1rem; font-weight: 600; margin: 0 0 6px; }
-  .project-node p { font-size: 0.95rem; color: var(--sage); margin: 0; }
-
-  /* Services Grid Modules */
+  /* Services Modules */
   .service-box { margin-bottom: 24px; }
-  .service-box h3 { font-family: var(--sans); font-size: 1.05rem; font-weight: 600; margin: 0 0 6px; }
-  .service-box h3 span { color: var(--coral); font-family: var(--mono); margin-right: 8px; }
-  .service-box p { font-size: 0.95rem; color: var(--sage); margin: 0; }
+  .service-box p { font-size: 14.5px; color: #444; margin: 2px 0 0; }
 
-  /* CV Timeline Elements */
-  .cv-block { margin-bottom: 30px; }
-  .cv-block-title { font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; color: var(--sage); margin-bottom: 12px; letter-spacing: 0.05em; }
-  .cv-row { display: flex; justify-content: space-between; gap: 20px; padding: 12px 0; border-top: 1px solid var(--line); }
+  /* CV Data Layout */
+  .cv-block { margin-bottom: 25px; }
+  .cv-block-title { font-size: 13px; font-weight: 700; text-transform: uppercase; color: var(--sage); margin-bottom: 10px; letter-spacing: 0.05em; }
+  .cv-row { display: flex; justify-content: space-between; gap: 20px; padding: 10px 0; border-top: 1px solid var(--line); }
   .cv-row:last-child { border-bottom: 1px solid var(--line); }
-  .cv-role { font-weight: 600; }
-  .cv-institution { color: var(--sage); font-size: 0.92rem; }
-  .cv-date { font-family: var(--mono); font-size: 0.8rem; color: var(--sage); white-space: nowrap; }
+  .cv-role { font-weight: 600; font-size: 14.5px; }
+  .cv-institution { color: var(--sage); font-size: 14px; }
+  .cv-date { font-family: var(--sans); font-size: 13.5px; color: var(--sage); white-space: nowrap; }
 
-  .cv-btn { border: 1px solid var(--teal); color: var(--teal); font-family: var(--mono); font-size: 0.8rem; padding: 8px 16px; border-radius: 4px; display: inline-block; margin-top: 10px; }
-  .cv-btn:hover { background: var(--teal); color: var(--paper); }
+  .cv-btn { text-decoration: underline; color: var(--ink); font-size: 14px; display: inline-block; margin-top: 8px; }
+  .cv-btn:hover { color: #444; }
 
-  footer { border-top: 1px solid var(--line); padding-top: 24px; font-family: var(--mono); font-size: 0.75rem; color: var(--sage); }
+  footer { border-top: 1px solid var(--line); padding-top: 20px; font-size: 13px; color: var(--sage); }
 </style>
 </head>
 <body>
 
 <div class="layout-container">
 
-  <!-- LEFT PANEL: FIXED SIDEBAR -->
+  <!-- LEFT PANEL: FIXED MINIMAL SIDEBAR -->
   <aside class="left-panel">
-    <div class="site-title">Georgina Kinuthia</div>
+    <h1><a href="#">Georgina Kinuthia</a></h1>
     <ul class="nav-menu">
-      <li><a href="#about">About</a></li>
-      <li><a href="#portfolio">Works</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#cv">CV</a></li>
+      <li><a href="#about">— About</a></li>
+      <li><a href="#portfolio">— Works</a></li>
+      <li><a href="#services">— Services</a></li>
+      <li><a href="#cv">— CV</a></li>
     </ul>
   </aside>
 
-  <!-- RIGHT PANEL: SCROLLABLE MAIN CONTENT -->
+  <!-- RIGHT PANEL: SCROLLABLE MAIN CONTENT AREA -->
   <main class="right-panel">
     
-    <!-- Profile Info Header -->
-    <h1 class="hero-name">Georgina Kinuthia</h1>
+    <!-- Profile Action Header -->
     <div class="social-links">
-      <a href="#">LinkedIn ↗</a>
-      <a href="#">GitHub ↗</a>
-      <a href="#">Email ↗</a>
-    </div>
-
-    <div class="scalebar-row">
-      <svg width="18" height="8" viewBox="0 0 18 8" fill="none"><path d="M0 4h18M0 1v6M9 1v6M18 1v6" stroke="currentColor" stroke-width="1.2"/></svg>
-      <span>0 &mdash; 1 &mdash; 2 KM</span>
-      <div class="rule"></div>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Email</a>
     </div>
 
     <!-- About Section -->
     <section id="about">
       <h2>Bio</h2>
       
-      <!-- Profile Picture Block -->
+      <!-- Profile Portrait -->
       <div class="profile-photo-container">
         <img src="portraitprofile.jpg" alt="Georgina Kinuthia" class="profile-photo">
       </div>
 
       <p>I specialize in using spatial data and participatory design to support more equitable infrastructure planning in resource-constrained cities.</p>
-      <p>Trained as an architect at the University of Nairobi, I've since practiced across Kenya, Haiti, and Somalia &mdash; delivering civic, educational, and humanitarian infrastructure for partners including the FAO, USAID, and SHOFCO. I'm currently a Scholar at the Norman Foster Institute in Madrid, building GIS-based spatial vulnerability frameworks for Mexico City's Miguel Hidalgo borough.</p>
+      <p>Trained as an architect at the University of Nairobi, I've since practiced across Kenya, Haiti, and Somalia — delivering civic, educational, and humanitarian infrastructure for partners including the FAO, USAID, and SHOFCO. I'm currently a Scholar at the Norman Foster Institute in Madrid, building GIS-based spatial vulnerability frameworks for Mexico City's Miguel Hidalgo borough.</p>
 
       <div class="focus-stack">
         <div class="focus-item">
@@ -198,24 +179,24 @@
     <section id="portfolio">
       <h2>Works</h2>
       <div class="project-node">
-        <div class="meta">Ciudad de México &middot; 2026</div>
+        <div class="meta">Ciudad de México / 2026</div>
         <h3>Miguel Hidalgo Spatial Vulnerability Framework (V.E.R.A. Index)</h3>
-        <p>GIS-based diagnostic framework mapping spatial vulnerability and systemic exposure across a Mexico City borough, with an accompanying public-realm design toolkit &mdash; Norman Foster Institute.</p>
+        <p>GIS-based diagnostic framework mapping spatial vulnerability and systemic exposure across a Mexico City borough, with an accompanying public-realm design toolkit — Norman Foster Institute.</p>
       </div>
       <div class="project-node">
-        <div class="meta">Nairobi &amp; Kisumu, Kenya &middot; 2025</div>
+        <div class="meta">Nairobi &amp; Kisumu, Kenya / 2025</div>
         <h3>Civic Insect Farm</h3>
-        <p>Circular bioeconomy facility prototype converting urban organic waste into protein feed and compost &mdash; FAO Green Cities Initiative, with the Italian Agency for Development Cooperation.</p>
+        <p>Circular bioeconomy facility prototype converting urban organic waste into protein feed and compost — FAO Green Cities Initiative, with the Italian Agency for Development Cooperation.</p>
       </div>
       <div class="project-node">
-        <div class="meta">Fond des Blancs, Haiti &middot; 2024</div>
+        <div class="meta">Fond des Blancs, Haiti / 2024</div>
         <h3>FDB Civic Center</h3>
-        <p>Community-planned civic building co-designed through a Community Planning Advisory Committee; adaptable spaces for governance, education, and gathering &mdash; Adaptiv.</p>
+        <p>Community-planned civic building co-designed through a Community Planning Advisory Committee; adaptable spaces for governance, education, and gathering — Adaptiv.</p>
       </div>
       <div class="project-node">
-        <div class="meta">Abudwak, Somalia &middot; 2024</div>
+        <div class="meta">Abudwak, Somalia / 2024</div>
         <h3>Iftiin Foundation Peace Hub</h3>
-        <p>Vocational training, psychosocial services, and enterprise incubation hub using passive cooling and locally quarried limestone &mdash; Adaptiv, with USAID.</p>
+        <p>Vocational training, psychosocial services, and enterprise incubation hub using passive cooling and locally quarried limestone — Adaptiv, with USAID.</p>
       </div>
     </section>
 
@@ -223,8 +204,43 @@
     <section id="services">
       <h2>Services</h2>
       <div class="service-box">
-        <h3><span>01</span> Spatial Vulnerability &amp; Equity Diagnostics</h3>
+        <h3>Spatial Vulnerability &amp; Equity Diagnostics</h3>
         <p>GIS-based mapping and index-building to identify where infrastructure and safety gaps fall hardest.</p>
       </div>
       <div class="service-box">
-        <h3><span>02</span> Participatory Design Facilitation</h3>
+        <h3>Participatory Design Facilitation</h3>
+        <p>Community planning workshops and advisory committees that ground design decisions in lived priorities.</p>
+      </div>
+      <div class="service-box">
+        <h3>Sustainable &amp; Circular Masterplanning</h3>
+        <p>Low-carbon, locally sourced design strategies for climate-vulnerable, resource-constrained sites.</p>
+      </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv">
+      <h2>CV</h2>
+      
+      <div class="cv-block">
+        <div class="cv-block-title">Recent Roles</div>
+        <div class="cv-row">
+          <div>
+            <div class="cv-role">Architect &amp; Researcher</div>
+            <div class="cv-institution">Disposition Africa</div>
+          </div>
+          <div class="cv-date">2024 – 2025</div>
+        </div>
+        <div class="cv-row">
+          <div>
+            <div class="cv-role">Architect</div>
+            <div class="cv-institution">Adaptiv · Haiti &amp; Somalia</div>
+          </div>
+          <div class="cv-date">2024 – 2025</div>
+        </div>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-block-title">Education</div>
+        <div class="cv-row">
+          <div>
+            <div class="cv-role">Master's Programme, City Science — NFI Scholar</div>
