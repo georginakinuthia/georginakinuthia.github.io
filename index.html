@@ -8,7 +8,8 @@
         :root {
             --text-color: #2b2b2b;
             --bg-color: #ffffff;
-            --accent-color: #d35400; /* Subtle rust/orange highlight line */
+            --accent-color: #d35400; /* Rust/orange accent highlight */
+            --link-color: #116699;
             --subtext-color: #666666;
             --border-color: #e5e5e5;
             --sidebar-width: 320px;
@@ -28,6 +29,18 @@
             display: flex;
             min-height: 100vh;
             line-height: 1.6;
+        }
+
+        /* Active Text Links Styling */
+        a {
+            color: var(--link-color);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
         }
 
         /* Sidebar Styling */
@@ -107,7 +120,6 @@
             color: var(--subtext-color);
             font-size: 0.95rem;
             font-weight: 500;
-            transition: color 0.2s ease;
         }
 
         .top-links a:hover {
@@ -170,6 +182,15 @@
             color: #333;
             line-height: 1.75;
             text-align: justify;
+        }
+
+        /* Highlighted Key Facts in Text */
+        .key-fact {
+            font-weight: 700;
+            color: #111;
+            background-color: #fff8f3;
+            padding: 2px 4px;
+            border-left: 2px solid var(--accent-color);
         }
 
         /* Works Section Cards */
@@ -387,95 +408,3 @@
             <a href="https://github.com/georginakinuthia" target="_blank" rel="noopener">GitHub ↗</a>
             <a href="mailto:ginakinuthia@gmail.com">Email ✉</a>
         </div>
-
-        <section id="about" class="page-section active">
-            <div class="section-header">
-                <h2>Bio</h2>
-            </div>
-            
-            <img src="portraitprofile.jpg" alt="Georgina Kinuthia" class="profile-img">
-
-            <div class="bio-text">
-                <p>I am a Sustainable Urban Designer, Registered Architect, and Scholar at the Norman Foster Institute in Madrid. My focus lies in the spatial data-driven analysis of urban environments, particularly through applied research in spatial vulnerability, transit infrastructure, and participatory design within public policy for sustainable cities. Trained as an architect at the University of Nairobi and registered with BORAQS, I have transitioned from traditional design practice to consulting on modeling complex urban systems and infrastructure equity.</p>
-                
-                <p>In my current role at the Norman Foster Institute, my work centers on the development of GIS-based spatial vulnerability frameworks in Mexico City to analyze building morphology, transit catchments, and socio-spatial risk distribution. By parsing empirical open datasets (INEGI, CONEVAL, SEMOVI) alongside neighborhood governance networks, I structure multi-scalar decision-support toolkits that direct public policy and funding into targeted resilient interventions. Proficient in tools including Python (GeoPandas), QGIS, Rhino 3D, and ABM, I contribute to solutions integrating urban data science, climate-responsive design, and social equity.</p>
-                
-                <p>In parallel, I collaborate with international development agencies, municipal governments, and architectural studios across Kenya, Haiti, and Somalia—including the FAO, USAID, and SHOFCO. My applied practice spans decentralized circular infrastructure (such as the 5 tons/day BSF Bioconversion Hub under the FAO Green Cities Initiative), climate-adapted educational facilities, and trauma-informed civic spaces, integrating low-carbon material systems and community advisory protocols into planning matrices.</p>
-                
-                <p>I maintain academic ties with the University of Nairobi (Kenya) and the Norman Foster Institute (Spain), while actively collaborating with international development networks and municipal planning bodies across Europe and the Global South.</p>
-            </div>
-        </section>
-
-        <section id="works" class="page-section">
-            <div class="section-header">
-                <h2>Featured Applied Practice & Research</h2>
-            </div>
-            
-            <div class="works-grid">
-                <article class="work-card">
-                    <span class="tag">Norman Foster Institute Studio | 2026</span>
-                    <h3>Mexico City Spatial Vulnerability & Risk Framework</h3>
-                    <div class="meta">Mexico City | Spatial Analytics & Decision-Support Toolkits</div>
-                    <p>Developed multi-layered GIS frameworks examining building morphology, transit catchments, and socio-spatial vulnerability across Mexico City. Parsed empirical open datasets (INEGI, CONEVAL, SEMOVI) to structure decision-support toolkits directing targeted public policy interventions.</p>
-                    <div class="tech-list">
-                        <span class="tech-tag">QGIS</span>
-                        <span class="tech-tag">Python (GeoPandas)</span>
-                        <span class="tech-tag">Agent-Based Modeling (ABM)</span>
-                        <span class="tech-tag">Empirical Data Parsing</span>
-                    </div>
-                </article>
-
-                <article class="work-card">
-                    <span class="tag">FAO Green Cities Initiative / Disposition Africa | 2024–2025</span>
-                    <h3>Decentralized Circular Infrastructure (BSF Bioconversion Hub)</h3>
-                    <div class="meta">Nairobi, Kenya | Circular Economy & Spatial Logistics</div>
-                    <p>Designed a 5 tons/day Black Soldier Fly (BSF) Bioconversion Hub facility addressing organic waste diversion, food security, and urban metabolism. Executed spatial siting analysis and low-carbon material integration for modular urban deployment.</p>
-                    <div class="tech-list">
-                        <span class="tech-tag">Circular Economy</span>
-                        <span class="tech-tag">GIS Site Siting</span>
-                        <span class="tech-tag">Low-Carbon Materials</span>
-                        <span class="tech-tag">Urban Metabolism</span>
-                    </div>
-                </article>
-
-                <article class="work-card">
-                    <span class="tag">U-Design Architects / SHOFCO | 2022</span>
-                    <h3>SHOFCO Climate-Adapted Educational Campus</h3>
-                    <div class="meta">Kibera Informal Settlement, Nairobi | Climate-Adapted Infrastructure</div>
-                    <p>Architectural delivery of a 4-story educational campus built over a steep 9-meter terrain slope. Integrated Compressed Earth Blocks (CEB) and stack-ventilation thermal chimneys to minimize embodied carbon and improve thermal comfort.</p>
-                    <div class="tech-list">
-                        <span class="tech-tag">CEB Construction</span>
-                        <span class="tech-tag">Passive Thermal Cooling</span>
-                        <span class="tech-tag">Infill Urbanism</span>
-                        <span class="tech-tag">Low-Carbon Systems</span>
-                    </div>
-                </article>
-
-                <article class="work-card">
-                    <span class="tag">Precise Architects | 2020–2022</span>
-                    <h3>Feminist Republik Trauma-Informed Master Plan</h3>
-                    <div class="meta">Kitui County, Kenya | Trauma-Informed Civic Space</div>
-                    <p>4.5-hectare rural sanctuary master plan for African Women Human Rights Defenders. Integrated topographic zoning along a 45m slope, universal access protocols, off-grid water loops, and Maasai spatial forms.</p>
-                    <div class="tech-list">
-                        <span class="tech-tag">Trauma-Informed Design</span>
-                        <span class="tech-tag">Topographic Zoning</span>
-                        <span class="tech-tag">Universal Accessibility</span>
-                        <span class="tech-tag">Off-Grid Infrastructure</span>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="services" class="page-section">
-            <div class="section-header">
-                <h2>Capabilities & Consulting Areas</h2>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-item">
-                    <h3>🌐 Urban Systems Modeling & Data Science</h3>
-                    <p>Building GIS-based decision-support toolkits using Python (GeoPandas), QGIS, and empirical open datasets (INEGI, CONEVAL, SEMOVI) to analyze socio-spatial vulnerability, building morphology, and transit accessibility catchments.</p>
-                </div>
-
-                <div class="service-item">
-                    <h3>🌿 Climate-Responsive
