@@ -1,150 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Georgina Kinuthia — Sustainable Urban Designer &amp; Architect</title>
-<style>
-  /* ---------- BRAND FRESH AESTHETICS FRAMEWORK ---------- */
-  :root {
-    --ink: #1a2421;                 /* Deep charcoal green for text readability */
-    --paper: #fcfbfa;               /* Warm off-white canvas skin background */
-    --card: #f4f2ee;                /* Soft stone module container backgrounds */
-    --accent: #d35400;              /* Terracotta Clay highlight accent color */
-    --moss: #2e4a3f;                /* Deep Sustainable Moss Green for titles */
-    --sage: #7a8a81;                /* Muted sage gray for navigation links */
-    --line: #dcd9d4;                /* Clean architectural line break separators */
-    --system-serif: "Fraunces", "Georgia", serif;
-    --system-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georgina Kinuthia — Sustainable Urban Designer & Architect</title>
+    <style>
+        :root {
+            --text-color: #2b2b2b;
+            --bg-color: #ffffff;
+            --accent-color: #d35400; /* Subtle rust/orange highlight line */
+            --sidebar-width: 300px;
+            --font-main: 'Helvetica Neue', Arial, sans-serif;
+        }
 
-  /* ---------- BASE PROTOCOL RESETS ---------- */
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  body {
-    background: var(--paper); 
-    color: var(--ink);
-    font-family: var(--system-sans); 
-    font-size: 16px; 
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
+        body {
+            font-family: var(--font-main);
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            display: flex;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
 
-  a { color: var(--accent); text-decoration: none; transition: color 0.15s ease; }
-  a:hover { color: var(--moss); }
-  p { margin: 0 0 1.5em; text-align: justify; color: #2d3532; font-size: 15.5px; }
+        /* Sidebar Styling */
+        aside {
+            width: var(--sidebar-width);
+            padding: 4rem 2rem;
+            position: fixed;
+            height: 100vh;
+            border-right: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+        }
 
-  /* ---------- MODERN RESPONSIVE DOUBLE PANEL CONTAINER ---------- */
-  .layout-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+        .brand h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 3rem;
+            color: #111;
+        }
 
-  /* Left Fixed Sidebar Panel */
-  .left-panel {
-    background: var(--card);
-    padding: 60px 35px 30px;
-    border-bottom: 2px solid var(--line);
-  }
+        nav ul {
+            list-style: none;
+        }
 
-  /* Right Panel Scroll Content Box */
-  .right-panel {
-    flex: 1;
-    padding: 50px 35px;
-  }
+        nav ul li {
+            margin-bottom: 1.2rem;
+        }
 
-  /* Desktop Multi-column Lock Override */
-  @media (min-width: 768px) {
-    .layout-container {
-      flex-direction: row;
-    }
-    .left-panel {
-      width: 28%;
-      min-width: 260px;
-      position: fixed;
-      top: 0; bottom: 0; left: 0;
-      border-bottom: none;
-      border-right: 2px solid var(--line);
-      padding: 80px 45px;
-    }
-    .right-panel {
-      margin-left: 28%;
-      padding: 80px 80px 80px 100px;
-      max-width: 820px;
-    }
-  }
+        nav ul li a {
+            text-decoration: none;
+            color: #777;
+            font-size: 1.05rem;
+            transition: color 0.2s ease;
+        }
 
-  /* ---------- TYPOGRAPHY & INTERFACE SYSTEMS ---------- */
-  .profile-link { font-family: var(--system-serif); font-size: 28px; font-weight: 700; margin: 0 0 32px; color: var(--moss); letter-spacing: -0.01em; display: block; }
-  .profile-link:hover { color: var(--accent); }
-  
-  h1 { font-family: var(--system-serif); font-size: 32px; font-weight: 700; margin: 0 0 24px; color: var(--moss); }
-  h2 { font-family: var(--system-serif); font-size: 18px; font-weight: 700; margin: 0 0 24px; color: var(--moss); text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 2px solid var(--accent); padding-bottom: 6px; display: inline-block; }
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--text-color);
+        }
 
-  /* Fully Synchronized Cross-Page Sidebar Navigation Menu Links */
-  .nav-menu { list-style: none; padding: 0; margin: 0; }
-  .nav-menu li { margin-bottom: 14px; }
-  .nav-menu a { font-size: 15px; color: var(--sage); font-weight: 500; letter-spacing: 0.02em; display: inline-block; transition: transform 0.2s ease, color 0.2s ease; }
-  .nav-menu a:hover { color: var(--moss); transform: translateX(4px); text-decoration: none; }
+        /* Main Content Styling */
+        main {
+            margin-left: var(--sidebar-width);
+            padding: 4rem 4rem 4rem 6rem;
+            max-width: 900px;
+        }
 
-  /* Active Inline Platform Contact Button Tray Styles */
-  .social-anchor-tray { display: flex; gap: 20px; flex-wrap: wrap; margin: 0 0 40px; font-size: 14.5px; font-weight: 600; font-family: var(--system-sans); }
-  .social-anchor-tray a { color: var(--sage); border-bottom: 2px solid transparent; padding-bottom: 2px; transition: color 0.15s ease, border-color 0.15s ease; }
-  .social-anchor-tray a:hover { color: var(--accent); border-bottom-color: var(--accent); text-decoration: none; }
+        /* Top Bar Navigation Links */
+        .top-links {
+            margin-bottom: 3rem;
+        }
 
-  /* Minimal Profile Frame Border Box */
-  .photo-frame { margin: 0 0 35px; text-align: left; }
-  .portrait-img { width: 140px; height: 140px; border-radius: 8px; object-fit: cover; display: block; filter: saturate(105%) contrast(102%); border: 1px solid var(--line); box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+        .top-links a {
+            text-decoration: none;
+            color: #777;
+            margin-right: 1.5rem;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
 
-  footer { border-top: 1px solid var(--line); padding-top: 24px; font-size: 13px; color: var(--sage); margin-top: 80px; }
-</style>
+        .top-links a:hover {
+            color: var(--text-color);
+        }
+
+        /* Bio Content Section */
+        .bio-section h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .bio-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            margin-bottom: 2.5rem;
+            display: block;
+        }
+
+        .bio-text p {
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+            text-align: justify;
+        }
+
+        /* Footer Section */
+        footer {
+            margin-top: 5rem;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 1.5rem;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* Responsive Mobile Layout Breakpoint */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            aside {
+                position: static;
+                width: 100%;
+                height: auto;
+                padding: 2rem;
+                border-right: none;
+                border-bottom: 1px solid #f0f0f0;
+            }
+            .brand h1 {
+                margin-bottom: 1.5rem;
+            }
+            main {
+                margin-left: 0;
+                padding: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<div class="layout-container">
+    <!-- Left Navigation Bar -->
+    <aside>
+        <div class="brand">
+            <h1>Georgina<br>Kinuthia</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">— About</a></li>
+                <li><a href="#">— Works</a></li>
+                <li><a href="#">— Services</a></li>
+                <li><a href="#">— CV</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-  <!-- LEFT PANEL: FIXED SIDEBAR CONTAINER -->
-  <aside class="left-panel">
-    <a href="/index.html" class="profile-link">Georgina Kinuthia</a>
-    <ul class="nav-menu">
-      <li><a href="/about.html">— About</a></li>
-      <li><a href="/works.html">— Works</a></li>
-      <li><a href="/services.html">— Services</a></li>
-      <li><a href="/cv.html">— CV</a></li>
-    </ul>
-  </aside>
+    <!-- Main Dynamic Content Workspace -->
+    <main>
+        <div class="top-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+            <a href="mailto:gk.student@normanfosterinstitute.org">Email</a>
+        </div>
 
-  <!-- RIGHT PANEL: SCROLLABLE CONTENT BODY -->
-  <main class="right-panel">
-    
-    <!-- ACTIVE VERIFIED PLATFORM CONTACT INTERFACE TRIPS -->
-    <nav class="social-anchor-tray">
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-      <a href="https://github.com" target="_blank">GitHub</a>
-      <a href="mailto:ginakinuthia@gmail.com">Email</a>
-    </nav>
+        <section class="bio-section">
+            <h2>Bio</h2>
+            
+            <!-- Replace 'profile.jpg' with your actual image path or CDN link -->
+            <img src="profile.jpg" alt="Georgina Kinuthia" class="profile-img">
 
-    <!-- About Content Section -->
-    <section>
-      <h2>Bio</h2>
-      
-      <!-- Portrait Graphic Placement -->
-      <div class="photo-frame">
-        <img src="/portraitprofile.jpg" alt="Georgina Kinuthia" class="portrait-img">
-      </div>
+            <div class="bio-text">
+                <p>I am an architect and Master's candidate on the Sustainable Cities programme at the <strong>Norman Foster Institute (ES)</strong>. My focus lies in participatory master planning and GIS-based spatial analysis, applied to public space, infrastructure equity, and underserved communities.</p>
+                
+                <p>Trained as an architect, I shifted toward multidisciplinary urban practice after my undergraduate thesis identified a structural gap: communities that cannot access architectural services are typically excluded from formal design processes altogether. This led to nine years of practice across Kenya, Haiti, Somalia, and the U.S., and subsequently to postgraduate study in urban design, where I collaborate with politicians, economists, journalists, and mathematicians to produce more rigorous, cross-disciplinary spatial analysis.</p>
+                
+                <p>As part of this programme, I co-developed an eight-layer GIS framework for diagnosing spatial and socio-economic vulnerability, applied to Mexico City's Miguel Hidalgo borough.</p>
+                
+                <p>I maintain professional ties with <strong>Adaptiv</strong>, <strong>U-Design Architects</strong>, and <strong>Disposition Africa</strong>, and collaborate with faculty and fellow students at the Norman Foster Institute.</p>
+            </div>
+        </section>
 
-      <p>I am an Urban Systems Architect and researcher using spatial data, participatory planning, and climate-responsive design to tackle infrastructure inequalities in growing cities [INDEX: 0.1.3]. My work connects hard data—like GIS mapping and Python modeling—with the real-world needs of local communities [INDEX: 0.1.33]. From designing schools in rural Haiti to analyzing transit accessibility in Mexico City, I build evidence-based frameworks that help city planners, architecture studios, and NGOs direct funding where it matters most [INDEX: 0.1.20, 0.1.36].</p>
-    </section>
-
-    <!-- Unified Footprint Footer -->
-    <footer>
-      <p>© Copyright 2026 Georgina Kinuthia. All text licensed CC-BY-NC 4.0.</p>
-    </footer>
-
-  </main>
-</div>
+        <footer>
+            &copy; Copyright 2026 Georgina Kinuthia. All text licensed CC-BY-NC 4.0.
+        </footer>
+    </main>
 
 </body>
 </html>
