@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Georgina Kinuthia | Architect & Urban Data Scientist</title>
+  <title>Georgina Kinuthia | Architect & Spatial Analytics Consultant</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -24,9 +24,7 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -47,7 +45,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(9, 9, 11, 0.85);
+      background: rgba(9, 9, 11, 0.88);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
       padding: 1.25rem 0;
@@ -66,9 +64,7 @@
       letter-spacing: -0.02em;
       text-transform: uppercase;
     }
-    .brand span {
-      color: var(--accent);
-    }
+    .brand span { color: var(--accent); }
     nav {
       display: flex;
       gap: 1.5rem;
@@ -82,25 +78,19 @@
       transition: all 0.2s ease;
       font-family: 'JetBrains Mono', monospace;
     }
-    nav a:hover, nav a.active {
-      color: var(--text);
-    }
+    nav a:hover, nav a.active { color: var(--text); }
     .nav-cv-btn {
       background: var(--text);
       color: var(--bg) !important;
       padding: 0.45rem 0.85rem;
       border-radius: 2px;
       font-weight: 500;
-      letter-spacing: -0.01em;
     }
-    .nav-cv-btn:hover {
-      background: #ffffff !important;
-      transform: translateY(-1px);
-    }
+    .nav-cv-btn:hover { background: #ffffff !important; }
 
     /* Hero Section */
     .hero {
-      padding: 6rem 0 4rem;
+      padding: 5.5rem 0 3.5rem;
       border-bottom: 1px solid var(--border);
     }
     .hero-meta-top {
@@ -109,7 +99,7 @@
       color: var(--accent);
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       display: flex;
       align-items: center;
       gap: 0.75rem;
@@ -122,11 +112,11 @@
       box-shadow: 0 0 10px var(--accent);
     }
     .hero-title {
-      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      font-size: clamp(2.5rem, 5.5vw, 4.2rem);
       font-weight: 800;
-      line-height: 1.05;
+      line-height: 1.08;
       letter-spacing: -0.04em;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       color: var(--text);
       max-width: 960px;
     }
@@ -136,12 +126,12 @@
       font-weight: 300;
     }
     .hero-tagline {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       color: var(--text-muted);
       font-weight: 300;
-      max-width: 820px;
+      max-width: 840px;
       line-height: 1.65;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2.25rem;
     }
 
     /* CTA Buttons */
@@ -149,21 +139,18 @@
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
-      margin-bottom: 3.5rem;
+      margin-bottom: 3rem;
     }
     .btn-primary {
       background: var(--accent);
       color: #ffffff;
-      padding: 0.8rem 1.6rem;
+      padding: 0.75rem 1.5rem;
       border-radius: 2px;
       font-weight: 500;
       font-size: 0.88rem;
       text-decoration: none;
       font-family: 'JetBrains Mono', monospace;
       transition: all 0.2s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
     }
     .btn-primary:hover {
       background: #2563eb;
@@ -173,7 +160,7 @@
       background: var(--surface);
       color: var(--text);
       border: 1px solid var(--border);
-      padding: 0.8rem 1.6rem;
+      padding: 0.75rem 1.5rem;
       border-radius: 2px;
       font-weight: 400;
       font-size: 0.88rem;
@@ -186,12 +173,11 @@
       border-color: var(--border-light);
     }
 
-    /* Tech Stack Grid Pills */
+    /* Skills Pills */
     .pills-container {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      padding-top: 1rem;
     }
     .pill {
       font-family: 'JetBrains Mono', monospace;
@@ -205,16 +191,11 @@
 
     /* Section Structure */
     section {
-      padding: 5rem 0;
+      padding: 4.5rem 0;
       border-bottom: 1px solid var(--border);
     }
     .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
-      gap: 1rem;
+      margin-bottom: 2.5rem;
     }
     .section-label {
       font-family: 'JetBrains Mono', monospace;
@@ -222,122 +203,197 @@
       color: var(--accent);
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
       display: block;
     }
     .section-heading {
-      font-size: 2rem;
+      font-size: 1.85rem;
       font-weight: 700;
       letter-spacing: -0.03em;
     }
 
-    /* Vision Cards Grid (VIMA Style) */
+    /* WebGIS Section (Top Feature) */
+    .webgis-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      border-radius: 2px;
+    }
+    .webgis-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .webgis-title { font-size: 1.2rem; font-weight: 700; }
+    .webgis-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+    .webgis-canvas {
+      border: 1px dashed var(--border-light);
+      background: var(--bg);
+      border-radius: 2px;
+      padding: 4.5rem 1rem;
+      text-align: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    /* Manifesto Vision Grid */
     .bio-text {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--text-muted);
       line-height: 1.75;
       max-width: 860px;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
       font-weight: 300;
     }
     .vision-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
     }
     .vision-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 2px;
-      padding: 2rem;
-      transition: border-color 0.2s;
-    }
-    .vision-card:hover {
-      border-color: var(--border-light);
+      padding: 1.75rem;
     }
     .vision-card .card-num {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--accent);
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
       display: block;
     }
     .vision-card h4 {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 600;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
       color: var(--text);
-      letter-spacing: -0.01em;
     }
     .vision-card p {
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
       line-height: 1.6;
     }
     .next-chapter {
       background: var(--surface);
-      border: 1px solid var(--border);
       border-left: 3px solid var(--accent);
-      padding: 1.5rem 2rem;
-      font-size: 1.05rem;
+      padding: 1.25rem 1.75rem;
+      font-size: 1rem;
       color: var(--text);
       font-weight: 400;
     }
 
-    /* Proof Table (Architectural Matrix Layout) */
-    .proof-matrix {
+    /* Portfolio Matrix Block Layout */
+    .portfolio-stack {
       display: flex;
       flex-direction: column;
-      gap: 1px;
-      background: var(--border);
+      gap: 2.5rem;
+    }
+    .project-card {
+      background: var(--surface);
       border: 1px solid var(--border);
+      padding: 2.25rem;
+      border-radius: 2px;
     }
-    .matrix-row {
-      display: grid;
-      grid-template-columns: 240px 1fr 1.2fr;
-      background: var(--bg);
-      padding: 2rem;
-      gap: 2rem;
-      transition: background 0.2s;
+    .project-meta-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
     }
-    .matrix-row:hover {
-      background: var(--surface);
-    }
-    .matrix-row.header {
-      background: var(--surface);
-      padding: 1rem 2rem;
+    .pillar-badge {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--text-dim);
+      font-size: 0.78rem;
+      color: var(--accent);
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
-    .pillar-tag {
+    .project-links {
+      display: flex;
+      gap: 1rem;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.85rem;
-      color: var(--accent);
-      font-weight: 500;
+      font-size: 0.8rem;
     }
-    .proj-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 0.35rem;
-    }
-    .proj-desc {
-      font-size: 0.92rem;
+    .project-links a {
       color: var(--text-muted);
-      line-height: 1.6;
+      text-decoration: none;
+      transition: color 0.2s;
     }
-    .proj-tech {
+    .project-links a:hover { color: var(--accent); text-decoration: underline; }
+    .project-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+    .project-desc {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+    
+    /* Key Insight Box */
+    .key-insight-box {
+      background: rgba(59, 130, 246, 0.08);
+      border-left: 3px solid var(--accent);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0 2px 2px 0;
+    }
+    .key-insight-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+    }
+    .key-insight-text {
+      font-size: 0.92rem;
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    /* QGIS Layout Preview Grid */
+    .qgis-preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+    }
+    .qgis-layout-card {
+      background: var(--bg);
+      border: 1px dashed var(--border-light);
+      padding: 1.5rem 1rem;
+      text-align: center;
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.78rem;
       color: var(--text-dim);
-      margin-top: 0.6rem;
+      border-radius: 2px;
+    }
+    .tech-stack-row {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      margin-top: 1rem;
     }
 
-    /* Experience & Education List Blocks */
+    /* Experience & Education Stack */
     .experience-stack {
       display: flex;
       flex-direction: column;
@@ -346,48 +402,34 @@
     .item-block {
       background: var(--surface);
       border: 1px solid var(--border);
-      padding: 2.25rem;
+      padding: 2rem;
       border-radius: 2px;
-      transition: border-color 0.2s;
-    }
-    .item-block:hover {
-      border-color: var(--border-light);
     }
     .item-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       gap: 1rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.35rem;
       flex-wrap: wrap;
     }
-    .item-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-    .item-date {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.82rem;
-      color: var(--accent);
-    }
+    .item-title { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; }
+    .item-date { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--accent); }
     .item-company {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin-bottom: 1.25rem;
     }
-    .item-bullets {
-      list-style: none;
-    }
+    .item-bullets { list-style: none; }
     .item-bullets li {
       position: relative;
       padding-left: 1.25rem;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: var(--text-muted);
-      margin-bottom: 0.65rem;
+      margin-bottom: 0.6rem;
       line-height: 1.6;
     }
     .item-bullets li::before {
@@ -397,7 +439,7 @@
       color: var(--accent);
     }
 
-    /* Writing Section Links */
+    /* Writing Links */
     .essay-list {
       list-style: none;
       display: flex;
@@ -416,50 +458,11 @@
       text-decoration: none;
       transition: background 0.2s;
     }
-    .essay-item:hover {
-      background: var(--surface);
-    }
-    .essay-title {
-      font-size: 1.05rem;
-      font-weight: 500;
-      color: var(--text);
-    }
-    .essay-meta {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--text-dim);
-      white-space: nowrap;
-    }
+    .essay-item:hover { background: var(--surface); }
+    .essay-title { font-size: 1.02rem; font-weight: 500; color: var(--text); }
+    .essay-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--text-dim); }
 
-    /* WebGIS Interactive Box */
-    .webgis-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 2.5rem;
-      border-radius: 2px;
-    }
-    .webgis-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    .webgis-desc {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-    .webgis-canvas {
-      border: 1px dashed var(--border-light);
-      background: var(--bg);
-      border-radius: 2px;
-      padding: 4.5rem 1rem;
-      text-align: center;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.85rem;
-      color: var(--text-dim);
-    }
-
-    /* Footer Layout */
+    /* Footer */
     footer {
       padding: 4rem 0;
       font-family: 'JetBrains Mono', monospace;
@@ -484,18 +487,11 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-    .footer-links a:hover {
-      color: var(--accent);
-    }
+    .footer-links a:hover { color: var(--accent); }
 
-    @media (max-width: 860px) {
-      .matrix-row {
-        grid-template-columns: 1fr;
-        gap: 0.75rem;
-      }
-      .matrix-row.header {
-        display: none;
-      }
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.5rem; }
+      .project-card, .item-block { padding: 1.5rem; }
     }
   </style>
 </head>
@@ -508,10 +504,10 @@
         <a href="#" class="brand">Georgina Kinuthia<span>.</span></a>
         <nav>
           <a href="#vision">Vision</a>
+          <a href="#webgis">WebGIS Map</a>
           <a href="#works">Portfolio</a>
           <a href="#experience">Experience</a>
           <a href="#writing">Writing</a>
-          <a href="#webgis">WebGIS</a>
           <a href="georgina-kinuthia-2026%20cv.pdf" download="georgina-kinuthia-2026 cv.pdf" class="nav-cv-btn">Download CV ↓</a>
         </nav>
       </div>
@@ -529,47 +525,42 @@
       
       <h1 class="hero-title">
         Georgina Kinuthia<br>
-        <em>Architect & Urban Data Scientist</em>
+        <em>Architect & Spatial Analytics Consultant</em>
       </h1>
       
       <p class="hero-tagline">
-        Bridging empirical spatial analytics with physical urban design to build climate-resilient, data-driven cities. Currently completing City Science research at the Norman Foster Institute in Madrid.
+        Bridging multi-layer spatial diagnostics, QGIS cartography, and physical master planning to design climate-resilient, data-driven urban infrastructure. Currently completing City Science research at the Norman Foster Institute in Madrid.
       </p>
 
       <div class="cta-group">
-        <a href="#works" class="btn-primary">View Spatial Portfolio →</a>
-        <a href="#writing" class="btn-secondary">Read Diagnostics</a>
+        <a href="#webgis" class="btn-primary">Explore Interactive Map ↓</a>
+        <a href="#works" class="btn-secondary">View QGIS Portfolio →</a>
         <a href="georgina-kinuthia-2026%20cv.pdf" download="georgina-kinuthia-2026 cv.pdf" class="btn-secondary">Download CV ↓</a>
       </div>
 
       <!-- Skills Pills -->
       <div class="pills-container">
-        <span class="pill">Geographic Information Systems</span>
-        <span class="pill">Python (GeoPandas)</span>
-        <span class="pill">Empirical Open Data Analysis</span>
-        <span class="pill">Multi-Layer Vulnerability Mapping</span>
+        <span class="pill">QGIS Multi-Criteria Evaluation</span>
+        <span class="pill">Spatial Analytics</span>
+        <span class="pill">Python Automation (GeoPandas)</span>
         <span class="pill">Space Syntax</span>
-        <span class="pill">Agent-Based Modeling</span>
         <span class="pill">Transit-Oriented Development</span>
-        <span class="pill">CPTED</span>
+        <span class="pill">CPTED Safety Mapping</span>
         <span class="pill">Rhino 3D</span>
         <span class="pill">AutoCAD</span>
         <span class="pill">Revit</span>
         <span class="pill">ArchiCAD</span>
         <span class="pill">Adobe InDesign</span>
         <span class="pill">Figma</span>
-        <span class="pill">Miro</span>
         <span class="pill">PMP Candidate</span>
       </div>
     </section>
 
-    <!-- Section 01: Vision & Future Focus -->
+    <!-- Section 01: Manifesto & Vision -->
     <section id="vision">
       <div class="section-head">
-        <div>
-          <span class="section-label">01 / Manifesto</span>
-          <h2 class="section-heading">From Drafting to City Science</h2>
-        </div>
+        <span class="section-label">01 / MANIFESTO</span>
+        <h2 class="section-heading">From Drafting to City Science</h2>
       </div>
       
       <div class="bio-text">
@@ -577,7 +568,7 @@
           Early in my practice as a licensed architect in Nairobi, I realized that even the most thoughtfully designed building stops at its plot line, as it cannot single-handedly fix an unsafe transit corridor, an unlit underpass, or an unmanaged municipal waste stream. That realization brought me to Madrid and the Norman Foster Institute to bridge spatial data science with physical master planning.
         </p>
         <p>
-          With over six years of hands-on architectural execution across East Africa, Haiti, and Somalia, I treat data as a tool to serve human experience. I combine computational urbanism (using Quantum Geographic Information System, Python, and Space Syntax) with real-world construction logic, low-carbon materials, and deep community co-design. My focus is simple: turning complex spatial diagnostics into buildable, climate-resilient urban infrastructure that protects dignity and improves daily public life.
+          With over six years of hands-on architectural execution across East Africa, Haiti, and Somalia, I treat spatial data as a decision-support tool to serve human experience. I combine QGIS spatial modeling and Python automated batch pipelines with real-world construction logic, low-carbon materials, and deep community co-design. My focus is simple: turning complex spatial diagnostics into buildable, climate-resilient urban infrastructure that protects dignity and improves daily public life.
         </p>
       </div>
 
@@ -604,61 +595,133 @@
       </div>
     </section>
 
-    <!-- Section 02: Proof of Work -->
-    <section id="works">
+    <!-- Section 02: WebGIS Feature (Moved to Top for Fast Recruiter Engagement) -->
+    <section id="webgis">
       <div class="section-head">
-        <div>
-          <span class="section-label">02 / Portfolio Matrix</span>
-          <h2 class="section-heading">Featured Impact Pillars</h2>
-        </div>
+        <span class="section-label">02 / INTERACTIVE CANVAS</span>
+        <h2 class="section-heading">WebGIS Baseline Diagnostics</h2>
       </div>
 
-      <div class="proof-matrix">
-        <div class="matrix-row header">
-          <div>Aspirational Pillar</div>
-          <div>Featured Project</div>
-          <div>Key Highlight & Tech Stack</div>
+      <div class="webgis-box">
+        <div class="webgis-header-row">
+          <div class="webgis-title">Multi-Layer Spatial Vulnerability Engine</div>
+          <div class="webgis-meta">Mapbox GL / QGIS Cloud API · Layer Control Active</div>
         </div>
-        <div class="matrix-row">
-          <div class="pillar-tag">Computational City Science</div>
-          <div>
-            <div class="proj-title">Mexico City Safety Infrastructure Framework</div>
-          </div>
-          <div>
-            <div class="proj-desc">8-layer GIS diagnostic parsing 12,393 public safety reports co-developed at the Norman Foster Institute for the Tacubaya transit hub.</div>
-            <div class="proj-tech">QGIS · Python · Space Syntax · Policy Framing</div>
-          </div>
-        </div>
-        <div class="matrix-row">
-          <div class="pillar-tag">Circular Infrastructure</div>
-          <div>
-            <div class="proj-title">UN-FAO Modular Bioconversion Hub Siting</div>
-          </div>
-          <div>
-            <div class="proj-desc">Spatial siting model mapping organic waste density centroids against transit routes for a 5-ton/day facility in Nairobi.</div>
-            <div class="proj-tech">GeoPandas · QGIS MCE · Circular Systems · FAO Alignment</div>
-          </div>
-        </div>
-        <div class="matrix-row">
-          <div class="pillar-tag">Evidence-Based Urban Design</div>
-          <div>
-            <div class="proj-title">Landhies Road Transit Precinct Redesign</div>
-          </div>
-          <div>
-            <div class="proj-desc">Grade 'A' thesis analyzing qualitative environmental psychology across a 36-acre market and bus terminal precinct, restructuring human circulation.</div>
-            <div class="proj-tech">B.Arch Thesis · CPTED Diagnostics · Environmental Psychology</div>
-          </div>
+        <p class="webgis-desc" style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+          Interactive spatial viewer rendering real-time network centrality, pedestrian vulnerability heatmaps, and public safety catchment overlays across urban transit corridors.
+        </p>
+        <div class="webgis-canvas">
+          [ Mapbox / QGIS Cloud Interactive Map Canvas Embed ]
         </div>
       </div>
     </section>
 
-    <!-- Section 03: Professional Experience -->
+    <!-- Section 03: Curated QGIS Portfolio Matrix -->
+    <section id="works">
+      <div class="section-head">
+        <span class="section-label">03 / PORTFOLIO MATRIX</span>
+        <h2 class="section-heading">Featured Spatial Diagnostics & Projects</h2>
+      </div>
+
+      <div class="portfolio-stack">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-meta-top">
+            <span class="pillar-badge">Computational City Science</span>
+            <div class="project-links">
+              <a href="#">[ View QGIS Print Layout ]</a>
+              <a href="https://github.com/georginakinuthia" target="_blank">[ View GitHub Repo ]</a>
+            </div>
+          </div>
+          <h3 class="project-title">Mexico City Safety Infrastructure Framework</h3>
+          <p class="project-desc">
+            8-layer GIS diagnostic tool co-developed at the Norman Foster Institute parsing 12,393 empirical crime records across Mexico City to design female-calibrated street safety infrastructure for the Tacubaya transit hub. Connected computational spatial diagnostics directly with municipal policy adoption.
+          </p>
+
+          <div class="key-insight-box">
+            <div class="key-insight-title">Key Spatial Insight</div>
+            <div class="key-insight-text">
+              Identified that 42% of gender-based public safety incidents were concentrated along just 3 unlit transit transfer corridors, driving targeted 4.5-meter safety node interventions.
+            </div>
+          </div>
+
+          <div class="qgis-preview-grid">
+            <div class="qgis-layout-card">[ QGIS Multi-Criteria Heatmap Export ]</div>
+            <div class="qgis-layout-card">[ Space Syntax Centrality Matrix ]</div>
+            <div class="qgis-layout-card">[ Tacubaya Master Plan Intervention ]</div>
+          </div>
+
+          <div class="tech-stack-row">
+            TOOLS: QGIS Multi-Criteria Evaluation · Python (OSMnx Network Processing) · Space Syntax · Executive Policy Strategy
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-meta-top">
+            <span class="pillar-badge">Circular Infrastructure & Siting</span>
+            <div class="project-links">
+              <a href="#">[ View QGIS Model ]</a>
+              <a href="https://github.com/georginakinuthia" target="_blank">[ View Script ]</a>
+            </div>
+          </div>
+          <h3 class="project-title">UN-FAO Modular Bioconversion Hub Siting Engine</h3>
+          <p class="project-desc">
+            Built Geographic Information System site suitability models mapping waste density centroids against transit networks to optimize circular facility siting across Nairobi. Automated spatial data processing using Python GeoPandas scripts to create scalable waste routing tools for municipal deployment.
+          </p>
+
+          <div class="key-insight-box">
+            <div class="key-insight-title">Key Spatial Insight</div>
+            <div class="key-insight-text">
+              Mapped organic waste generation centroids against road network friction, revealing site selection options that cut municipal collection routing distances by 28%.
+            </div>
+          </div>
+
+          <div class="qgis-preview-grid">
+            <div class="qgis-layout-card">[ QGIS Suitability Overlay ]</div>
+            <div class="qgis-layout-card">[ Waste Routing Friction Map ]</div>
+            <div class="qgis-layout-card">[ 5-Ton Bioconversion Site Layout ]</div>
+          </div>
+
+          <div class="tech-stack-row">
+            TOOLS: QGIS Site Suitability · Python Automation (GeoPandas) · UN-FAO Green Cities Framework · Facility Design
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-meta-top">
+            <span class="pillar-badge">Evidence-Based Urban Design</span>
+            <div class="project-links">
+              <a href="#">[ View Thesis Layout ]</a>
+            </div>
+          </div>
+          <h3 class="project-title">Landhies Road Transit Precinct Redesign</h3>
+          <p class="project-desc">
+            Earned Grade 'A' Distinction for Bachelor of Architecture thesis investigating Crime Prevention Through Environmental Design along Landhies Road in Nairobi. Mapped a 36-acre market and bus terminal precinct, replacing opaque perimeter walls with active street frontages and continuous public lighting.
+          </p>
+
+          <div class="key-insight-box">
+            <div class="key-insight-title">Key Spatial Insight</div>
+            <div class="key-insight-text">
+              Demonstrated qualitative correlation between perimeter wall opacity and pedestrian fear perception, guiding spatial restructuring of circulation across 36 acres.
+            </div>
+          </div>
+
+          <div class="tech-stack-row">
+            TOOLS: Qualitative CPTED Diagnostics · Spatial Perception Analysis · Environmental Psychology · Master Planning
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 04: Professional Experience -->
     <section id="experience">
       <div class="section-head">
-        <div>
-          <span class="section-label">03 / Trajectory</span>
-          <h2 class="section-heading">Professional Experience</h2>
-        </div>
+        <span class="section-label">04 / TRAJECTORY</span>
+        <h2 class="section-heading">Professional Experience</h2>
       </div>
 
       <div class="experience-stack">
@@ -733,13 +796,11 @@
       </div>
     </section>
 
-    <!-- Section 04: Academic Research & Credentials -->
+    <!-- Section 05: Academic Credentials & Licensure -->
     <section id="education">
       <div class="section-head">
-        <div>
-          <span class="section-label">04 / Credentials</span>
-          <h2 class="section-heading">Education & Licensure</h2>
-        </div>
+        <span class="section-label">05 / CREDENTIALS</span>
+        <h2 class="section-heading">Education & Licensure</h2>
       </div>
 
       <div class="experience-stack">
@@ -772,46 +833,26 @@
       </div>
     </section>
 
-    <!-- Section 05: Spatial Writing -->
+    <!-- Section 06: Spatial Writing -->
     <section id="writing">
       <div class="section-head">
-        <div>
-          <span class="section-label">05 / Writing</span>
-          <h2 class="section-heading">Essays & Teardowns</h2>
-        </div>
+        <span class="section-label">06 / WRITING & ESSAYS</span>
+        <h2 class="section-heading">Spatial Diagnostics & Teardowns</h2>
       </div>
 
       <div class="essay-list">
-        <a href="#" class="essay-item">
-          <span class="essay-title">Why Spatial Waste Siting Fails Without Network Friction Analysis</span>
+        <a href="https://github.com/georginakinuthia" target="_blank" class="essay-item">
+          <span class="essay-title">Why Spatial Waste Siting Fails Without Network Friction Analysis →</span>
           <span class="essay-meta">Circular Logistics · 2025</span>
         </a>
-        <a href="#" class="essay-item">
-          <span class="essay-title">Calibrating Street Safety Infrastructure for Women in High-Density Transit Corridors</span>
+        <a href="https://github.com/georginakinuthia" target="_blank" class="essay-item">
+          <span class="essay-title">Calibrating Street Safety Infrastructure for Women in High-Density Transit Corridors →</span>
           <span class="essay-meta">City Science · 2026</span>
         </a>
-        <a href="#" class="essay-item">
-          <span class="essay-title">From Slum Infill to Stepped Massing: Embedded Carbon vs. Topography in Kibera</span>
+        <a href="https://github.com/georginakinuthia" target="_blank" class="essay-item">
+          <span class="essay-title">From Slum Infill to Stepped Massing: Embedded Carbon vs. Topography in Kibera →</span>
           <span class="essay-meta">Low-Carbon Tectonics · 2024</span>
         </a>
-      </div>
-    </section>
-
-    <!-- Section 06: WebGIS Preview -->
-    <section id="webgis">
-      <div class="section-head">
-        <div>
-          <span class="section-label">06 / Interactive Canvas</span>
-          <h2 class="section-heading">WebGIS Baseline Diagnostics</h2>
-        </div>
-      </div>
-
-      <div class="webgis-box">
-        <div class="webgis-title">Multi-Layer Spatial Vulnerability Engine</div>
-        <div class="webgis-desc">Interactive Mapbox / QGIS Cloud layer rendering real-time network centrality and risk exposure.</div>
-        <div class="webgis-canvas">
-          [ Mapbox / QGIS Cloud Interactive Map Canvas Embed ]
-        </div>
       </div>
     </section>
 
