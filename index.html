@@ -35,7 +35,7 @@
       padding: 0 1.5rem;
     }
 
-    /* Header & Navigation */
+    /* Navigation */
     header {
       padding: 2.25rem 0 1.5rem;
       border-bottom: 1px solid var(--border);
@@ -155,6 +155,7 @@
       display: flex;
       align-items: center;
       gap: 0.6rem;
+      margin-bottom: 2.5rem;
       flex-wrap: wrap;
     }
     .status-dot {
@@ -163,6 +164,23 @@
       background-color: var(--accent);
       border-radius: 50%;
       display: inline-block;
+    }
+
+    /* Software & Skills Pills */
+    .pills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1rem;
+    }
+    .pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      background: #f1f0eb;
+      color: #374151;
+      padding: 0.25rem 0.6rem;
+      border-radius: 3px;
+      border: 1px solid #e5e5e0;
     }
 
     .divider {
@@ -194,6 +212,9 @@
       line-height: 1.7;
       max-width: 840px;
       margin-bottom: 2rem;
+    }
+    .bio-text p {
+      margin-bottom: 1.25rem;
     }
     .vision-grid {
       display: grid;
@@ -266,6 +287,64 @@
       font-size: 0.78rem;
       color: #6b7280;
       margin-top: 0.35rem;
+    }
+
+    /* Itemized Block Lists */
+    .item-block {
+      padding: 2.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .item-block:first-of-type {
+      border-top: 1px solid var(--border);
+    }
+    .item-meta-top {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.4rem;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .item-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+    }
+    .item-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      color: #6b7280;
+    }
+    .item-desc {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      max-width: 820px;
+    }
+    .item-bullets {
+      list-style-type: none;
+      margin-bottom: 1rem;
+    }
+    .item-bullets li {
+      position: relative;
+      padding-left: 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .item-bullets li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
     }
 
     /* Writing Section */
@@ -365,9 +444,10 @@
       <nav>
         <a href="#vision">Vision</a>
         <a href="#works">Portfolio</a>
+        <a href="#experience">Experience</a>
         <a href="#writing">Writing</a>
         <a href="#webgis">WebGIS</a>
-        <a href="georgina-kinuthia-cv.pdf" download="Georgina_Kinuthia_CV.pdf" class="nav-cv-btn">Download CV ↓</a>
+        <a href="georgina-kinuthia-2026%20cv.pdf" download="georgina-kinuthia-2026 cv.pdf" class="nav-cv-btn">Download CV ↓</a>
       </nav>
     </div>
   </header>
@@ -382,56 +462,79 @@
       </h1>
       
       <p class="hero-tagline">
-        Bridging empirical spatial analytics with physical urban design to build climate-resilient, data-driven cities. Currently completing City Science research at the Norman Foster Institute in Madrid. <!--[cite: 3, 5] -->
+        Bridging empirical spatial analytics with physical urban design to build climate-resilient, data-driven cities. Currently completing City Science research at the Norman Foster Institute in Madrid.
       </p>
 
       <div class="cta-group">
         <a href="#works" class="btn-primary">View Spatial Portfolio →</a>
         <a href="#writing" class="btn-secondary">Read Urban Diagnostics</a>
-        <a href="georgina-kinuthia-cv.pdf" download="Georgina_Kinuthia_CV.pdf" class="btn-secondary">Download CV ↓</a>
+        <a href="georgina-kinuthia-2026%20cv.pdf" download="georgina-kinuthia-2026 cv.pdf" class="btn-secondary">Download CV ↓</a>
       </div>
 
       <div class="meta-status">
-        MADRID, SPAIN &nbsp;·&nbsp; <span class="status-dot"></span> REGISTERED ARCHITECT (BORAQS A2099) & NFI CITY SCIENCE SCHOLAR <!--[cite: 3, 5] -->
+        MADRID, SPAIN &nbsp;·&nbsp; <span class="status-dot"></span> REGISTERED ARCHITECT (BORAQS A2099) & NFI CITY SCIENCE SCHOLAR
+      </div>
+
+      <!-- Skills Pills -->
+      <div class="pills-container">
+        <span class="pill">Geographic Information Systems</span>
+        <span class="pill">Python (GeoPandas)</span>
+        <span class="pill">Empirical Open Data Analysis</span>
+        <span class="pill">Multi-Layer Vulnerability Mapping</span>
+        <span class="pill">Space Syntax</span>
+        <span class="pill">Agent-Based Modeling</span>
+        <span class="pill">Transit-Oriented Development</span>
+        <span class="pill">CPTED</span>
+        <span class="pill">Rhino 3D</span>
+        <span class="pill">AutoCAD</span>
+        <span class="pill">Revit</span>
+        <span class="pill">ArchiCAD</span>
+        <span class="pill">Adobe InDesign</span>
+        <span class="pill">Figma</span>
+        <span class="pill">Miro</span>
+        <span class="pill">PMP Candidate</span>
       </div>
     </section>
 
     <hr class="divider">
 
-    <!-- Section 1: Vision & Future Focus -->
+    <!-- Section 01: Vision & Future Focus -->
     <section id="vision">
       <span class="section-label">01 / VISION & FUTURE FOCUS</span>
       <h2 class="section-heading">From Drafting to City Science</h2>
       
       <div class="bio-text">
         <p>
-          Across six years of professional architectural execution in East Africa, I managed the construction delivery of over 12,000 m² of built space. Yet, physical buildings alone cannot solve systemic urban challenges like unsafe transit corridors or unmanaged waste streams. My transition to computational city science in Europe bridges this gap—combining physical design instincts with data science to make spatial analytics buildable and policy-relevant. <!--[cite: 3, 5] -->
+          Early in my practice as a licensed architect in Nairobi, I realized that even the most thoughtfully designed building stops at its plot line, as it cannot single-handedly fix an unsafe transit corridor, an unlit underpass, or an unmanaged municipal waste stream. That realization brought me to Madrid and the Norman Foster Institute to bridge spatial data science with physical master planning.
+        </p>
+        <p>
+          With over six years of hands-on architectural execution across East Africa, Haiti, and Somalia, I treat data as a tool to serve human experience. I combine computational urbanism (using Quantum Geographic Information System, Python, and Space Syntax) with real-world construction logic, low-carbon materials, and deep community co-design. My focus is simple: turning complex spatial diagnostics into buildable, climate-resilient urban infrastructure that protects dignity and improves daily public life.
         </p>
       </div>
 
       <div class="vision-grid">
         <div class="vision-card">
           <h4>Evidence-Based Public Realm</h4>
-          <p>Leveraging multi-layer spatial diagnostics (safety mapping, transit catchments) to inform equitable municipal policy and transit-oriented development. <!--[cite: 2, 5] --></p>
+          <p>Leveraging multi-layer spatial diagnostics (safety mapping, transit catchments) to inform equitable municipal policy and transit-oriented development.</p>
         </div>
         <div class="vision-card">
           <h4>Circular & Low-Carbon Infrastructure</h4>
-          <p>Scaling automated spatial siting models for circular urban waste hubs and decentralized green utilities. <!--[cite: 3, 5] --></p>
+          <p>Scaling automated spatial siting models for circular urban waste hubs and decentralized green utilities.</p>
         </div>
         <div class="vision-card">
           <h4>Global-South Rigor for Global Cities</h4>
-          <p>Applying resource-efficient, high-vulnerability diagnostic frameworks to European and international urban contexts. <!--[cite: 5] --></p>
+          <p>Applying resource-efficient, high-vulnerability diagnostic frameworks to European and international urban contexts.</p>
         </div>
       </div>
 
       <div class="next-chapter">
-        Seeking urban planning, spatial analytics, and infrastructure strategy roles within multidisciplinary delivery teams in Madrid and globally. <!--[cite: 5] -->
+        Seeking urban planning, spatial analytics, and infrastructure strategy roles within multidisciplinary delivery teams in Madrid and globally.
       </div>
     </section>
 
     <hr class="divider">
 
-    <!-- Section 2: Proof of Work -->
+    <!-- Section 02: Proof of Work -->
     <section id="works">
       <span class="section-label">02 / CURATED PROOF OF WORK</span>
       <h2 class="section-heading">Featured Impact Pillars</h2>
@@ -448,31 +551,31 @@
           <tr>
             <td class="pillar-title">Computational City Science</td>
             <td>
-              <div class="project-name">Mexico City Safety Infrastructure Framework</div> <!--[cite: 1, 2, 5] -->
+              <div class="project-name">Mexico City Safety Infrastructure Framework</div>
             </td>
             <td>
-              <div class="project-desc">8-layer GIS diagnostic parsing 12,393 public safety reports co-developed at the Norman Foster Institute for the Tacubaya transit hub. <!--[cite: 2, 5] --></div>
-              <div class="tech-stack">QGIS · Python · Space Syntax · Policy Framing <!--[cite: 2, 5] --></div>
+              <div class="project-desc">8-layer GIS diagnostic parsing 12,393 public safety reports co-developed at the Norman Foster Institute for the Tacubaya transit hub.</div>
+              <div class="tech-stack">QGIS · Python · Space Syntax · Policy Framing</div>
             </td>
           </tr>
           <tr>
             <td class="pillar-title">Circular Infrastructure</td>
             <td>
-              <div class="project-name">UN-FAO Modular Bioconversion Hub Siting</div> <!--[cite: 3, 5] -->
+              <div class="project-name">UN-FAO Modular Bioconversion Hub Siting</div>
             </td>
             <td>
-              <div class="project-desc">Spatial siting model mapping organic waste density centroids against transit routes for a 5-ton/day facility in Nairobi. <!--[cite: 3, 5] --></div>
-              <div class="tech-stack">GeoPandas · QGIS MCE · Circular Systems · FAO Alignment <!--[cite: 3, 5] --></div>
+              <div class="project-desc">Spatial siting model mapping organic waste density centroids against transit routes for a 5-ton/day facility in Nairobi.</div>
+              <div class="tech-stack">GeoPandas · QGIS MCE · Circular Systems · FAO Alignment</div>
             </td>
           </tr>
           <tr>
             <td class="pillar-title">Evidence-Based Urban Design</td>
             <td>
-              <div class="project-name">Landhies Road Transit Precinct Redesign</div> <!--[cite: 3, 5] -->
+              <div class="project-name">Landhies Road Transit Precinct Redesign</div>
             </td>
             <td>
-              <div class="project-desc">Grade 'A' 36-acre spatial analysis restructuring circulation and CPTED street frontages across a major municipal market and bus terminal. <!--[cite: 3, 5] --></div>
-              <div class="tech-stack">B.Arch Thesis · CPTED Diagnostics · Transit Planning <!--[cite: 3, 5] --></div>
+              <div class="project-desc">Grade 'A' thesis analyzing qualitative environmental psychology across a 36-acre market and bus terminal precinct, restructuring human circulation.</div>
+              <div class="tech-stack">B.Arch Thesis · CPTED Diagnostics · Environmental Psychology</div>
             </td>
           </tr>
         </tbody>
@@ -481,9 +584,125 @@
 
     <hr class="divider">
 
-    <!-- Section 3: Spatial Writing -->
+    <!-- Section 03: Professional Experience -->
+    <section id="experience">
+      <span class="section-label">03 / EXPERIENCE</span>
+      <h2 class="section-heading">Professional Trajectory</h2>
+
+      <div class="experience-list">
+
+        <!-- Role 1 -->
+        <div class="item-block">
+          <div class="item-header">
+            <h3 class="item-title">Circular Infrastructure Researcher & Spatial Analyst</h3>
+            <span class="item-date">Mar 2024 to Nov 2025</span>
+          </div>
+          <div class="item-meta-top">Disposition Africa Ltd (UN-FAO Green Cities Alignment) · Nairobi, Kenya</div>
+          <ul class="item-bullets">
+            <li>Built Geographic Information System site suitability models mapping waste density centroids against transit networks to optimize facility siting.</li>
+            <li>Automated spatial data pipelines using Python (GeoPandas) to create scalable waste routing tools for municipal deployment.</li>
+            <li>Designed site layouts for a 5-ton/day organic bioconversion hub operating within a compact 50×100 ft footprint.</li>
+          </ul>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="item-block">
+          <div class="item-header">
+            <h3 class="item-title">Urban Designer & Master Planner (Remote)</h3>
+            <span class="item-date">Mar 2024 to Jan 2025</span>
+          </div>
+          <div class="item-meta-top">Adaptiv · Boston, MA, USA (Haiti, Somalia, Kenya Projects)</div>
+          <ul class="item-bullets">
+            <li>Created master plans and site layouts serving 15,000+ residents across fragile international contexts in Haiti, Somalia, and Kenya.</li>
+            <li>Led community co-design workshops with 30+ local and donor stakeholders to align spatial proposals with lived realities.</li>
+            <li>Designed passive climate systems (thermal mass, stack ventilation) that reduced indoor temperatures by 4 to 6°C.</li>
+          </ul>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="item-block">
+          <div class="item-header">
+            <h3 class="item-title">Architect & Project Manager</h3>
+            <span class="item-date">Mar 2022 to Mar 2024</span>
+          </div>
+          <div class="item-meta-top">U-Design Architects Ltd · Nairobi, Kenya</div>
+          <ul class="item-bullets">
+            <li>Managed design development and delivery for 8+ master planning projects totaling over 12,000 m² of built area.</li>
+            <li>Designed a 4-story campus in Kibera using a 9-meter stepped massing strategy and Compressed Earth Blocks to cut structural carbon emissions by 60%.</li>
+            <li>Formulated modular housing prototype frameworks for deployment across 47 counties.</li>
+          </ul>
+        </div>
+
+        <!-- Role 4 -->
+        <div class="item-block">
+          <div class="item-header">
+            <h3 class="item-title">Assistant Architect</h3>
+            <span class="item-date">Jul 2020 to Mar 2022</span>
+          </div>
+          <div class="item-meta-top">Precise Architects Ltd · Nairobi, Kenya</div>
+          <ul class="item-bullets">
+            <li>Designed an Export Processing Zone (EPZ) wastewater treatment plant, integrating industrial water recycling, environmental containment, and utility layout engineering.</li>
+            <li>Prepared 4.5-hectare master plans integrating solar power, rainwater harvesting, off-grid utilities, and universal accessibility features.</li>
+          </ul>
+        </div>
+
+        <!-- Role 5 -->
+        <div class="item-block">
+          <div class="item-header">
+            <h3 class="item-title">Construction Manager & Junior Architect</h3>
+            <span class="item-date">May 2015 to Jul 2020</span>
+          </div>
+          <div class="item-meta-top">Athi River / Rubics Studio / Dimensions · Kenya</div>
+          <ul class="item-bullets">
+            <li>Managed lean-budget site construction workflows, material reuse strategies, and daily site audits.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Section 04: Academic Research & Credentials -->
+    <section id="education">
+      <span class="section-label">04 / ACADEMIC RESEARCH & CREDENTIALS</span>
+      <h2 class="section-heading">Education & Licensure</h2>
+
+      <div class="experience-list">
+
+        <div class="item-block">
+          <div class="item-header">
+            <h3 class="item-title">Norman Foster Institute · Madrid, Spain</h3>
+            <span class="item-date">Jan 2026 to Dec 2026</span>
+          </div>
+          <div class="item-meta-top">Master in City Science / Sustainable Cities</div>
+          <ul class="item-bullets">
+            <li>Awarded a competitive 75% merit-based grant for academic excellence.</li>
+            <li>Co-developed an 8-layer GIS decision-support tool parsing 12,393 crime records across Mexico City to design female-calibrated street safety infrastructure for the Tacubaya transit hub.</li>
+            <li>Partnered directly with Mexico City municipal leaders to connect computational spatial diagnostics with real-world policy adoption.</li>
+          </ul>
+        </div>
+
+        <div class="item-block">
+          <div class="item-header">
+            <h3 class="item-title">University of Nairobi · Nairobi, Kenya</h3>
+            <span class="item-date">Sept 2012 to Sept 2018</span>
+          </div>
+          <div class="item-meta-top">Bachelor of Architecture (Second Class Honors, Lower Division)</div>
+          <ul class="item-bullets">
+            <li>Earned Grade 'A' Distinction for thesis on Crime Prevention Through Environmental Design along Landhies Road, focusing on qualitative research into environmental psychology, spatial perception, and human behavior in transit environments.</li>
+            <li>Analyzed a 36-acre market and bus terminal precinct, restructuring human circulation by replacing opaque perimeter walls with active street frontages and continuous public lighting.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Section 05: Spatial Writing -->
     <section id="writing">
-      <span class="section-label">03 / SPATIAL WRITING & DIAGNOSTICS</span>
+      <span class="section-label">05 / SPATIAL WRITING & DIAGNOSTICS</span>
       <h2 class="section-heading">Essays & Teardowns</h2>
 
       <ul class="essay-list">
@@ -496,7 +715,7 @@
           <span class="essay-meta">City Science · 2026</span>
         </li>
         <li class="essay-item">
-          <a href="#" class="essay-title">From Slum Infill to Stepped Massing: Embedded Carbon vs. Topography in Kibera</a> <!--[cite: 3, 5] -->
+          <a href="#" class="essay-title">From Slum Infill to Stepped Massing: Embedded Carbon vs. Topography in Kibera</a>
           <span class="essay-meta">Low-Carbon Tectonics · 2024</span>
         </li>
       </ul>
@@ -504,9 +723,9 @@
 
     <hr class="divider">
 
-    <!-- Section 4: WebGIS Preview -->
+    <!-- Section 06: WebGIS Preview -->
     <section id="webgis">
-      <span class="section-label">04 / INTERACTIVE SPATIAL MODEL</span>
+      <span class="section-label">06 / INTERACTIVE SPATIAL MODEL</span>
       <h2 class="section-heading">WebGIS Baseline Diagnostics</h2>
 
       <div class="webgis-box">
@@ -520,12 +739,12 @@
 
     <!-- Footer -->
     <footer>
-      <p>LOCATION: Madrid, Spain <!--[cite: 1, 3, 5] --> · GEORGINA KINUTHIA</p>
+      <p>LOCATION: Madrid, Spain · GEORGINA KINUTHIA · REGISTERED ARCHITECT (BORAQS REG. NO. A2099)</p>
       <div class="footer-links">
         <a href="https://github.com/georginakinuthia" target="_blank">github.com/georginakinuthia</a>
-        <a href="https://linkedin.com/in/gina-kinuthia" target="_blank">linkedin.com/in/gina-kinuthia</a> <!--[cite: 3, 5] -->
-        <a href="mailto:ginakinuthia@gmail.com">ginakinuthia@gmail.com</a> <!--[cite: 3, 5] -->
-        <a href="georgina-kinuthia-cv.pdf" download="Georgina_Kinuthia_CV.pdf">Download PDF CV ↓</a>
+        <a href="https://linkedin.com/in/gina-kinuthia" target="_blank">linkedin.com/in/gina-kinuthia</a>
+        <a href="mailto:ginakinuthia@gmail.com">ginakinuthia@gmail.com</a>
+        <a href="georgina-kinuthia-2026%20cv.pdf" download="georgina-kinuthia-2026 cv.pdf">Download PDF CV ↓</a>
       </div>
     </footer>
 
